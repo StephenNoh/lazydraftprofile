@@ -1,0 +1,90 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: arial;
+    
+  }
+  
+  body {
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("background2.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    color: red;
+  }
+  
+  .container {
+    width: 800px;
+    max-width: 80%;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .btn-grid {
+    display: grid;
+    gap: 10px;
+    margin: 20px 0;
+  }
+  
+  .btn {
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 5px 10px;
+    outline: none;
+  }
+  
+  .hide {
+      display: none;
+  }
+
+  .heading {
+      font-weight: bold;
+      font-size: 20px;
+      text-decoration: underline;
+  }
+
+  #banner {
+    padding: 20px;
+    text-align: center;
+    background-color: black;
+    width: 800px;
+    max-width: 80%;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px 2px;
+    color: red;
+  }
+
+  .profile, .heading {
+    width: 800px;
+    max-width: 80%;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .profile {
+    background-color: black;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px 2px; 
+  }
+
+  .description {
+    font-style: italic;
+  }
+
+  #question {
+      color: black;
+  }
