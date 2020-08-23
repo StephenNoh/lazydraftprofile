@@ -12,28 +12,28 @@ const questions = [
       question: 'Are you a good defender?',
       answers: [
         { text: "Put me in a Florida bar because there's nothing I can't lock down", response: "-Defensive Player of the Year potential!" },
-        { text: "They don't pay players to play defense", response: "-Guards all five positions equally well"}
+        { text: "They don't pay players to play defense", response: "-Guards all five positions equally well."}
       ]
     },
     {
       question: 'Are you a good passer?',
       answers: [
-        { text: 'I\'m a savant', response: "-Unbelievable feel \n-Too unselfish? \n-A poor man's Luka Doncic?"},
-        { text: 'Why pass when you can shoot?', response: "-Shoot-first microwave scorer \n-The next Jamal Crawford?" }
+        { text: 'I\'m a savant', response: "-UNBELIEVABLE feel \n-Too unselfish? \n-Could be the next Luka Doncic?"},
+        { text: 'Why pass when you can shoot?', response: "-Shoot-first guard \n-Microwave scorer \n-The next Jamal Crawford?" }
       ]
     },
     {
         question: 'Are you a good shooter?',
         answers: [
-          { text: 'Three things you can count on: death, taxes, and my jump shot.', response: "-Unicorn shooting. \n-Game-changing range \n-Comp: Steph Curry"},
-          { text: 'I couldn\'t even beat Michael Carter-Williams at HORSE', response: "-Developing shooter. Great potential." }
+          { text: 'Three things you can count on: death, taxes, and my jump shot.', response: "-UNICORN shooting. \n-Game-changing range \n-Comp: Steph Curry"},
+          { text: 'I couldn\'t even beat Michael Carter-Williams at HORSE', response: "-Developing shooter. FREAK potential." }
         ]
       },
       {
         question: 'How\'s your rebounding?',
         answers: [
-          { text: 'The gym should pay me for how well I clean the glass', response: "-Ferocious rebounder. \n-A nose for the ball. \n-High motor." },
-          { text: 'If the ball falls directly into my hands, 50/50 chance that I get it.', response: "-Unbelievable at leaking out in transition." }
+          { text: 'The gym should pay me for how well I clean the glass', response: "-FEROCIOUS rebounder. \n-A nose for the ball. \n-High motor." },
+          { text: 'If the ball falls directly into my hands, 50/50 chance that I get it.', response: "-Always looking up the court. \n-Runs the court like a GAZELLE in transition." }
         ]
       }
   ]
