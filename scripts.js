@@ -104,7 +104,7 @@ function nextQuestionNo() {
 
 function clearQuestions () {
     document.getElementById("quiz-form").classList.add("hide")
-    document.getElementById("banner").innerText = "NBA DRAFT PROFILE: " + document.getElementById("name").value.toUpperCase()
+    document.getElementById("banner").innerText = "LAZY NBA DRAFT PROFILE: " + document.getElementById("name").value.toUpperCase()
     document.getElementById("reference").innerText = `-Former NBA executive of the year: "He's the ${document.getElementById("position").value} of the future."`
 
 }
