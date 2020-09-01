@@ -140,7 +140,7 @@ function fillProfile () {
 
   document.getElementById("banner").innerText = "DRAFT PROFILE: " + document.getElementById("name").value.toUpperCase()
   setProfile()
-  document.getElementById("comps").innerText = (findComps(myProfile).length > 0) ? findComps(myProfile).map(a => a.PLAYER).join(", ") : "No matching comps."
+  document.getElementById("comps").innerText = (findComps(myProfile).length > 0) ? findComps(myProfile).map(a => a.Player).join(", ") : "No matching comps."
   document.getElementById("pick-range").innerText = pickRange()
   
 }
