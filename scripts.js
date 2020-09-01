@@ -1,110 +1,216 @@
-const startButton = document.getElementById("startButton")
-const btn1 = document.getElementById("btn1")
-const btn2 = document.getElementById("btn2")
-const questionContainerElement = document.getElementById("question-container")
-const questionElement = document.getElementById("question")
-const answerButtonsElement = document.getElementById("answer-buttons")
-const defense = document.getElementById("defense")
-const passing = document.getElementById("passing")
 
-const questions = [
-    {
-      question: 'Are you a good defender?',
-      answers: [
-        { text: "Put me in a Florida bar because there's nothing I can't lock down", response: "-Defensive Player of the Year potential!" },
-        { text: "They don't pay players to play defense", response: "-Guards all five positions equally well."}
-      ]
+
+const descriptions = [
+  {attribute: "defense",
+  responses: [
+    {value: 1,
+    text: ["Seems excited to let guys score so they can get the ball back.", `Sees teammates go to the other end of the court on defense, but doesn't understand that they are supposed to follow them.`, "Seems aware that there is a half court line, but not all that interested in crossing it.", "Would make a terrific crossing guard if basketball doesn't work out. A natural at waving people through the lane."]
     },
-    {
-      question: 'Are you a good passer?',
-      answers: [
-        { text: 'I\'m a savant', response: "-UNBELIEVABLE feel \n-Too unselfish? \n-Could be the next Luka Doncic?"},
-        { text: 'Why pass when you can shoot?', response: "-Shoot-first guard \n-Microwave scorer \n-The next Jamal Crawford?" }
-      ]
+    {value: 2,
+    text: ["Mediocre defender.", "Average defender."]
     },
-    {
-        question: 'Are you a good shooter?',
-        answers: [
-          { text: 'Three things you can count on: death, taxes, and my jump shot.', response: "-UNICORN shooting. \n-Game-changing range \n-Comp: Steph Curry"},
-          { text: 'I couldn\'t even beat Michael Carter-Williams at HORSE', response: "-Developing shooter. FREAK potential." }
-        ]
-      },
-      {
-        question: 'How\'s your rebounding?',
-        answers: [
-          { text: 'The gym should pay me for how well I clean the glass', response: "-FEROCIOUS rebounder. \n-A nose for the ball. \n-High motor." },
-          { text: 'If the ball falls directly into my hands, 50/50 chance that I get it.', response: "-Always looking up the court. \n-Runs the court like a GAZELLE in transition." }
-        ]
-      }
+    {value: 3,
+      text: [`Put this kid in a Florida bar because there's nothing they can't lock down.`, `Their defense is so good, I'd trust them to guard Fort Knox.`]
+    }
   ]
+  },
+  {attribute: "shooting",
+  responses: [
+    {value: 1,
+    text: [`It's a good thing that there's global warming because they sure couldn't throw it into today's oceans.`, `Might help if they aimed for anything but the rim.`]
+    },
+    {value: 2,
+    text: ["Cromulent shooter.", `Can't leave them wide open.`]
+    },
+    {value: 3,
+      text: ["Jump shot has more range than Beyonce.", "Jump shot has more range than Johnny Depp.", "Three things in life you can count on; Death, taxes, and this kid's jump shot."]
+    }
+  ]
+  },
+  {attribute: "ballhandling",
+  responses: [
+    {value: 1,
+    text: [`Cover your eyes when they dribble.`, "Turnover machine."]
+    },
+    {value: 2,
+    text: ["Won't turn it over too much.", `Knows their limits with the ball.`]
+    },
+    {value: 3,
+      text: [`Instead of growing up wanting to dribble like Kyrie Irving, kids are going to want to handle like them.`, "Can put the ball on a string."]
+    }
+  ]
+},
+{attribute: "passing",
+  responses: [
+    {value: 1,
+    text: ["Take cover when they're making a pass.", "Court vision limited to looking at the rim."]
+    },
+    {value: 2,
+    text: ["Can make the quick simple pass.", "Not much of a playmaker, but can do the basics."]
+    },
+    {value: 3,
+      text: [`Could open up a boutique with how good they are at threading the needle.`, "Transcendant passer."]
+    }
+  ]
+},
+{attribute: "rebounding",
+  responses: [
+    {value: 1,
+    text: ["Allergic to rebounds.", `I know in theory they can get a rebound. But nobody's seen it yet.`]
+    },
+    {value: 2,
+    text: ["Adequate rebounder.", `Can rebound their position`]
+    },
+    {value: 3,
+      text: ["If the board man gets paid, get ready to cut this kid a check.", "Walking double-double.", `Rebounds faster than a Kardashian.`]
+    }
+  ]
+},
+{attribute: "hustle",
+  responses: [
+    {value: 1,
+    text: ["A nice way of putting it is that you don't have to worry that they'll tire themself out.", `Looks ready to take a nap.`, "Energy level of someone who's been on hold with customer service for the last two hours."]
+    },
+    {value: 2,
+    text: ["Decent worker.", "Doesn't go too fast."]
+    },
+    {value: 3,
+      text: ["Will run through a wall.", "Plays like someone insulted his mother."]
+    }
+  ]
+}
+]
 
-startButton.addEventListener("click", startQuiz)
-btn1.addEventListener("click", nextQuestionYes)
-btn2.addEventListener("click", nextQuestionNo)
 
-function startQuiz () {
-    btn1.classList.remove("hide")
-    btn1.classList.add("btn")
-    btn2.classList.remove("hide")
-    btn2.classList.add("btn")
-    startButton.classList.remove("btn")
-    startButton.classList.add("hide")
-    document.getElementById("name").classList.add("hide")
-    document.getElementById("position").classList.add("hide")
-    currentQuestion=0
-    nextQuestionYes()
 
+
+//declare some variables to shortcut later
+
+const submitButton = document.getElementById("submitButton")
+const profile = document.getElementById("profile")
+const defense = document.getElementById("defense")
+const shooting = document.getElementById("shooting")
+const ballhandling = document.getElementById("ballhandling")
+const passing = document.getElementById("passing")
+const rebounding = document.getElementById("rebounding")
+const hustle = document.getElementById("hustle")
+const strengths = document.getElementById("strengths")
+const weaknesses = document.getElementById("weaknesses")
+const backButton = document.getElementById("back-button")
+let strengthsArray = []; 
+let weaknessesArray = [];
+
+
+//event listeners for buttons
+submitButton.addEventListener("click", fillProfile)
+backButton.addEventListener("click", goBack)
+
+
+//make the go back button work
+function goBack () {
+  document.getElementById("start-form").classList.remove("hide")
+  document.getElementById("profile").classList.add("hide")
+  document.getElementById("banner").innerText = "Create your NBA draft profile"
+  strengthsArray = []
+  weaknessesArray = []
+  strengths.innerText = "None."
+  weaknesses.innerText = "None."
 }
 
-let currentQuestion=0
+//hide the slider bars and bring up the scouting report page
+function fillProfile () {
+  //fill strengths and weaknesses arrays by descriptions
+ 
+  strengthOrWeakness("defense")
+  strengthOrWeakness("shooting")
+  strengthOrWeakness("passing")
+  strengthOrWeakness("rebounding")
+  strengthOrWeakness("hustle")
+  strengthOrWeakness("ballhandling")
+  
+//hide the sliders, fill the strenghts and weaknesses divs with text
+  document.getElementById("start-form").classList.add("hide")
+  document.getElementById("profile").classList.remove("hide")
+  if (strengthsArray.length > 0) {
+    strengths.innerText = strengthsArray.join(' ')
+  }
+  if (weaknessesArray.length > 0) {
+    weaknesses.innerText = weaknessesArray.join(' ')
+  }
 
-function nextQuestionYes() {
-    if (currentQuestion ==0) {
-        btn1.innerText = questions[currentQuestion].answers[0].text
-        btn2.innerText = questions[currentQuestion].answers[1].text
-    }
-    if (currentQuestion ==1) {
-        defense.innerText = questions[currentQuestion - 1].answers[0].response
-    }
-    if (currentQuestion ==2) {
-        passing.innerText = questions[currentQuestion - 1].answers[0].response
-    }
-    if (currentQuestion ==3) {
-        shooting.innerText = questions[currentQuestion - 1].answers[0].response
-    }
-    if (currentQuestion ==4) {
-        rebounding.innerText = questions[currentQuestion - 1].answers[0].response
-        clearQuestions()
-    }
-  questionElement.innerText = questions[currentQuestion].question
-  btn1.innerText = questions[currentQuestion].answers[0].text
-  btn2.innerText = questions[currentQuestion].answers[1].text
-  currentQuestion ++;
+  document.getElementById("banner").innerText = "DRAFT PROFILE: " + document.getElementById("name").value.toUpperCase()
+  setProfile()
+  document.getElementById("comps").innerText = (findComps(myProfile).length > 0) ? findComps(myProfile).map(a => a.PLAYER).join(", ") : "No matching comps."
+  document.getElementById("pick-range").innerText = pickRange()
+  
 }
 
-function nextQuestionNo() {
-    if (currentQuestion ==1) {
-        defense.innerText = questions[currentQuestion - 1].answers[1].response
+//function within fillProfile that allows you to grab a random description from the descriptions array
+function grabDescription (attributes, values) {
+  for (let i=0; i<descriptions.length; i++) {
+    if (descriptions[i].attribute == attributes) {
+      if (values <= 40) {
+        return descriptions[i].responses[0].text[Math.round(Math.random()*(descriptions[i].responses[0].text.length - 1))];
+      }
+      if (values > 40 && values < 60) {
+        return descriptions[i].responses[1].text[Math.round(Math.random()*(descriptions[i].responses[0].text.length - 1))];
+      }
+      if (values >= 60) {
+        return descriptions[i].responses[2].text[Math.round(Math.random()*(descriptions[i].responses[0].text.length - 1))];
+      }
     }
-    if (currentQuestion ==2) {
-        passing.innerText = questions[currentQuestion - 1].answers[1].response
-    }
-    if (currentQuestion ==3) {
-        shooting.innerText = questions[currentQuestion - 1].answers[1].response
-    }
-    if (currentQuestion ==4) {
-        rebounding.innerText = questions[currentQuestion - 1].answers[1].response
-        clearQuestions()
-    }
-  questionElement.innerText = questions[currentQuestion].question
-  btn1.innerText = questions[currentQuestion].answers[0].text
-  btn2.innerText = questions[currentQuestion].answers[1].text
-  currentQuestion ++;
+  }
 }
 
-function clearQuestions () {
-    document.getElementById("quiz-form").classList.add("hide")
-    document.getElementById("banner").innerText = "LAZY NBA DRAFT PROFILE: " + document.getElementById("name").value.toUpperCase()
-    document.getElementById("reference").innerText = `-Former NBA executive of the year: "He's the ${document.getElementById("position").value} of the future."`
+//used in the fillProfile function to classify each characteristic as a strength or weakness
+function strengthOrWeakness (attributes) {
+  if (document.getElementById(`${attributes}-slider`).value > 40) {
+    strengthsArray.push(grabDescription(attributes, document.getElementById(`${attributes}-slider`).value))
+  }
+  if (document.getElementById(`${attributes}-slider`).value <= 40) {
+    weaknessesArray.push(grabDescription(attributes, document.getElementById(`${attributes}-slider`).value))
+  }
+}
+
+
+
+//comps
+let myProfile = {
+  name: "", 
+}
+
+ function setProfile () {
+  myProfile.passing = (document.getElementById("passing-slider").value > 50)
+  myProfile.ballhandling = (document.getElementById("ballhandling-slider").value > 50)
+  myProfile.shooting = (document.getElementById("shooting-slider").value > 50)
+  myProfile.hustle = (document.getElementById("hustle-slider").value > 70)
+  myProfile.defense = (document.getElementById("defense-slider").value > 50)
+  myProfile.rebounding = (document.getElementById("rebounding-slider").value > 50)
+  myProfile.scoring = (document.getElementById("scoring-slider").value > 50)
+}
+
+
+//pick range
+
+function pickRange () {
+  let range = parseInt(document.getElementById("passing-slider").value) + parseInt(document.getElementById("ballhandling-slider").value) + parseInt(document.getElementById("shooting-slider").value) + parseInt(document.getElementById("hustle-slider").value) + parseInt(document.getElementById("defense-slider").value) + parseInt(document.getElementById("rebounding-slider").value) + parseInt(document.getElementById("scoring-slider").value)
+  if (range > 550 && range < 701) {
+    return "Top five."
+  }
+  if (range > 500 && range < 550) {
+    return "Lottery pick."
+  }
+  if (range > 420 && range < 500) {
+    return "Late first round."
+  }
+  if (range > 350 && range < 420) {
+    return "Second round."
+  }
+  if (range > 250 && range < 350) {
+    return "Overseas."
+  }
+  if (range >= 0 && range < 250) {
+    return "Hang up the shoes and start a blogging career."
+  }
 
 }

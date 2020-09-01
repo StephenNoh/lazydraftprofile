@@ -3,42 +3,87 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Create your laziest NBA draft profile</title>
+  <title>Create your NBA draft profile</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1 id="banner">Create your cliche draft profile</h1>
-    <div class="container" id="quiz-form">
-        <div id="question-container">
-            <div id="question"></div>
-            <div id="answer-buttons" class="btn-grid">
-                <button class="hide" id="btn1" ></button>
-                <button class="hide" id="btn2" ></button>
-                <input type="text" id="name" placeholder="enter name">
-                <input type="text" id="position" placeholder="position (ex. guard, wing)">
-                <button class="btn" id="startButton">START!</button>
+    <div class="container">
+        <h1 id="banner">Create your NBA draft profile</h1>
+        <div id="start-form">
+            <hr>
+            <div id="description">
+                <strong>Instructions:</strong> Move the sliders to correspond to your skill level, then hit submit to generate your draft profile.
+            </div>
+            <hr>
+            
+            <form>
+                <div class="form-group">
+                    <label for="name">Enter your name:</label>
+                    <input type="name" class="form-control" id="name" placeholder="Name">
+                </div>
+                <div class="form-group">
+                    <label for="defense-slider">Defense:</label>
+                    <input type="range" min="1" max="100" class="form-control-range" id="defense-slider" value="10">
+                </div>
+                <div class="form-group">
+                    <label for="shooting-slider">Shooting:</label>
+                    <input type="range" min="1" max="100" class="form-control-range" id="shooting-slider" value="15">
+                </div>
+                <div class="form-group">
+                    <label for="ballhandling-slider">Ballhandling:</label>
+                    <input type="range" min="1" max="100" class="form-control-range" id="ballhandling-slider" value="55">
+                </div>
+                <div class="form-group">
+                    <label for="passing-slider">Passing:</label>
+                    <input type="range" min="1" max="100" class="form-control-range" id="passing-slider" value="70">
+                </div>
+                <div class="form-group">
+                    <label for="rebounding-slider">Rebounding:</label>
+                    <input type="range" min="1" max="100" class="form-control-range" id="rebounding-slider" value="90">
+                </div>
+                <div class="form-group">
+                    <label for="hustle-slider">Hustle:</label>
+                    <input type="range" min="1" max="100" class="form-control-range" id="hustle-slider" value="10">
+                </div>
+                <div class="form-group">
+                    <label for="athleticism-slider">Scoring:</label>
+                    <input type="range" min="1" max="100" class="form-control-range" id="scoring-slider" value="30">
+                </div>
+                   
+
+            </form>
+            <div class="buttons">
+            <button type="button" class="btn btn-primary" id="submitButton">Submit</button>
+            </div>
+        </div>
+        <div class="hide" id="profile">
+            <div id="profile-text">
+                <div class="heading">Pluses:</div>
+                <hr>
+                <div class="description" id="strengths">Warped self-perception. Bad at addressing flaws.</div>
+                <br>
+                <div class="heading">Minuses:</div>
+                <hr>
+                <div class="description" id="weaknesses">Warped self-perception. Bad at addressing flaws.</div>
+                <br>
+                <div class ="heading">Comps:</div>
+                <hr>
+                <div id="comps"></div>
+                <br>
+                <div class ="heading">Pick Range: <span id="pick-range" style="font-weight:normal"></span></div>
+                <br>
+                <div class="buttons">
+                <button type="button" class="btn btn-primary" id="back-button">Go Back</button>
+                </div>
             </div>
         </div>
     </div>
-    <div class="profile">
-        <div class="heading">Defense</div>
-            <div class="description" id="defense"></div>
-        <div class="heading">Passing</div>
-            <div class="description" id="passing"></div>
-        <div class="heading">Shooting</div>
-            <div class="description" id="shooting"></div>
-        <div class="heading">Rebounding</div>
-            <div class="description" id="rebounding"></div>
-        <hr>
-        <div id="reference" class="description"></div>
-    </div>
-    <div id="reset"
-        <button id="start-over" class="hide">Start Over</button>
-</div>
-
-  
-  
     <script src="scripts.js"></script>
-  
+    <script src="players.js"></script>
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>  
 </body>
 </html>
