@@ -4,20 +4,20 @@ const descriptions = [
   {attribute: "defense",
   responses: [
     {value: 1,
-    text: ["Seems excited to let guys score so they can get the ball back.", `Sees teammates go to the other end of the court on defense, but doesn't understand that they are supposed to follow them.`, "Seems aware that there is a half court line, but not all that interested in crossing it.", "Would make a terrific crossing guard if basketball doesn't work out. A natural at waving people through the lane."]
+    text: ["Seems excited to let guys score so they can get the ball back.", `Sees teammates go to the other end of the court on defense, but doesn't understand that they are supposed to follow them.`, "Seems aware that there is a half court line, but not all that interested in crossing it.", "Could have sworn I overheard them say defense is for suckers."]
     },
     {value: 2,
     text: ["Mediocre defender.", "Average defender."]
     },
     {value: 3,
-      text: [`Put this kid in a Florida bar because there's nothing they can't lock down.`, `Their defense is so good, I'd trust them to guard Fort Knox.`]
+      text: [`Put this kid in a Florida bar because there's nothing they can't lock down.`, "DPOY Potential."]
     }
   ]
   },
   {attribute: "shooting",
   responses: [
     {value: 1,
-    text: [`It's a good thing that there's global warming because they sure couldn't throw it into today's oceans.`, `Might help if they aimed for anything but the rim.`]
+    text: ["Couldn't beat Michael Carter-Williams in HORSE.", "I've seen storm troopers shoot better."]
     },
     {value: 2,
     text: ["Cromulent shooter.", `Can't leave them wide open.`]
@@ -30,7 +30,7 @@ const descriptions = [
   {attribute: "ballhandling",
   responses: [
     {value: 1,
-    text: [`Cover your eyes when they dribble.`, "Turnover machine."]
+    text: ["Rough handle."]
     },
     {value: 2,
     text: ["Won't turn it over too much.", `Knows their limits with the ball.`]
@@ -43,7 +43,7 @@ const descriptions = [
 {attribute: "passing",
   responses: [
     {value: 1,
-    text: ["Take cover when they're making a pass.", "Court vision limited to looking at the rim."]
+    text: ["Shaky passer.", "Court vision needs work."]
     },
     {value: 2,
     text: ["Can make the quick simple pass.", "Not much of a playmaker, but can do the basics."]
@@ -59,20 +59,20 @@ const descriptions = [
     text: ["Allergic to rebounds.", `I know in theory they can get a rebound. But nobody's seen it yet.`]
     },
     {value: 2,
-    text: ["Adequate rebounder.", `Can rebound their position`]
+    text: ["Adequate rebounder.", `Can rebound their position.`]
     },
     {value: 3,
-      text: ["If the board man gets paid, get ready to cut this kid a check.", "Walking double-double.", `Rebounds faster than a Kardashian.`]
+      text: ["Gobbles up rebounds.", "Walking double-double.", `Rebounds faster than a Kardashian.`]
     }
   ]
 },
 {attribute: "hustle",
   responses: [
     {value: 1,
-    text: ["A nice way of putting it is that you don't have to worry that they'll tire themself out.", `Looks ready to take a nap.`, "Energy level of someone who's been on hold with customer service for the last two hours."]
+    text: ["Motor runs hot and cold.", `Looks ready to take a nap.`, "Energy level of someone who's been on hold with customer service for the last two hours."]
     },
     {value: 2,
-    text: ["Decent worker.", "Doesn't go too fast."]
+    text: ["Decent worker.", "Doesn't go too fast.", "Decent motor."]
     },
     {value: 3,
       text: ["Will run through a wall.", "Plays like someone insulted his mother."]
