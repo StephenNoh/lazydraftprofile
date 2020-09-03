@@ -165,10 +165,10 @@ function grabDescription (attributes, values) {
 
 //used in the fillProfile function to classify each characteristic as a strength or weakness
 function strengthOrWeakness (attributes) {
-  if (document.getElementById(`${attributes}-slider`).value > 40) {
+  if (document.getElementById(`${attributes}-slider`).value > 50) {
     strengthsArray.push(grabDescription(attributes, document.getElementById(`${attributes}-slider`).value))
   }
-  if (document.getElementById(`${attributes}-slider`).value <= 40) {
+  if (document.getElementById(`${attributes}-slider`).value <= 50) {
     weaknessesArray.push(grabDescription(attributes, document.getElementById(`${attributes}-slider`).value))
   }
 }
@@ -184,7 +184,7 @@ let myProfile = {
   myProfile.passing = (document.getElementById("passing-slider").value > 50)
   myProfile.ballhandling = (document.getElementById("ballhandling-slider").value > 50)
   myProfile.shooting = (document.getElementById("shooting-slider").value > 50)
-  myProfile.hustle = (document.getElementById("hustle-slider").value > 70)
+  myProfile.hustle = (document.getElementById("hustle-slider").value > 50)
   myProfile.defense = (document.getElementById("defense-slider").value > 50)
   myProfile.rebounding = (document.getElementById("rebounding-slider").value > 50)
   myProfile.scoring = (document.getElementById("scoring-slider").value > 50)
@@ -195,22 +195,22 @@ let myProfile = {
 
 function pickRange () {
   let range = parseInt(document.getElementById("passing-slider").value) + parseInt(document.getElementById("ballhandling-slider").value) + parseInt(document.getElementById("shooting-slider").value) + parseInt(document.getElementById("hustle-slider").value) + parseInt(document.getElementById("defense-slider").value) + parseInt(document.getElementById("rebounding-slider").value) + parseInt(document.getElementById("scoring-slider").value)
-  if (range > 550 && range < 701) {
+  if (range > 550 && range < 710) {
     return "Top five."
   }
-  if (range > 500 && range < 550) {
+  if (range > 500 && range < 560) {
     return "Lottery pick."
   }
-  if (range > 420 && range < 500) {
+  if (range > 420 && range < 501) {
     return "Late first round."
   }
-  if (range > 350 && range < 420) {
+  if (range > 350 && range < 421) {
     return "Second round."
   }
-  if (range > 250 && range < 350) {
+  if (range > 250 && range < 351) {
     return "Overseas."
   }
-  if (range >= 0 && range < 250) {
+  if (range >= 0 && range < 251) {
     return "Hang up the shoes and start a blogging career."
   }
 

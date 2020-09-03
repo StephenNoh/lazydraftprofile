@@ -657,9 +657,9 @@ const tier2 =
 },
 {
   "Player": "Al Horford",
-  "shooting": false,
+  "shooting": true,
   "rebounding": true,
-  "ballhandling": true,
+  "ballhandling": false,
   "defense": true,
   "passing": true,
   "scoring": false
@@ -697,7 +697,7 @@ const tier2 =
   "shooting": true,
   "rebounding": true,
   "ballhandling": true,
-  "defense": true,
+  "defense": false,
   "passing": true,
   "scoring": false
 },
@@ -1141,10 +1141,10 @@ const tier2 =
 },
 {
   "Player": "Tristan Thompson",
-  "shooting": true,
+  "shooting": false,
   "rebounding": true,
   "ballhandling": false,
-  "defense": false,
+  "defense": true,
   "passing": false,
   "scoring": false
 },
@@ -3126,10 +3126,10 @@ const tier2 =
 },
 {
   "Player": "Denzel Valentine",
-  "shooting": false,
-  "rebounding": false,
+  "shooting": true,
+  "rebounding": true,
   "ballhandling": true,
-  "defense": true,
+  "defense": false,
   "passing": true,
   "scoring": true
 },
@@ -3162,12 +3162,12 @@ const tier2 =
 },
 {
   "Player": "Shaquille Harrison",
-  "shooting": true,
+  "shooting": false,
   "rebounding": false,
-  "ballhandling": true,
+  "ballhandling": false,
   "defense": true,
-  "passing": true,
-  "scoring": true
+  "passing": false,
+  "scoring": false
 },
 {
   "Player": "Cheick Diallo",
@@ -3201,18 +3201,18 @@ const tier2 =
   "shooting": false,
   "rebounding": true,
   "ballhandling": false,
-  "defense": true,
+  "defense": false,
   "passing": false,
   "scoring": true
 },
 {
   "Player": "Brandon Knight",
-  "shooting": false,
+  "shooting": true,
   "rebounding": false,
   "ballhandling": true,
   "defense": false,
   "passing": true,
-  "scoring": false
+  "scoring": true
 },
 {
   "Player": "J.J. Barea",
@@ -3221,7 +3221,7 @@ const tier2 =
   "ballhandling": true,
   "defense": false,
   "passing": true,
-  "scoring": true
+  "scoring": false
 },
 {
   "Player": "Edmond Sumner",
@@ -3252,7 +3252,7 @@ const tier2 =
 },
 {
   "Player": "Thabo Sefolosha",
-  "shooting": false,
+  "shooting": true,
   "rebounding": true,
   "ballhandling": true,
   "defense": true,
@@ -3298,7 +3298,7 @@ const tier2 =
 {
   "Player": "Andre Iguodala",
   "shooting": false,
-  "rebounding": false,
+  "rebounding": true,
   "ballhandling": true,
   "defense": true,
   "passing": true,
@@ -3407,7 +3407,7 @@ const tier2 =
   "Player": "Jared Dudley",
   "shooting": true,
   "rebounding": false,
-  "ballhandling": true,
+  "ballhandling": false,
   "defense": true,
   "passing": false,
   "scoring": false
@@ -3459,7 +3459,7 @@ const tier2 =
 },
 {
   "Player": "Carsen Edwards",
-  "shooting": false,
+  "shooting": true,
   "rebounding": false,
   "ballhandling": true,
   "defense": false,
