@@ -67,7 +67,7 @@ const tier1 = [
       "shooting": false,
       "rebounding": true,
       "ballhandling": true,
-      "defense": true,
+      "defense": false,
       "passing": true,
       "scoring": true
     },
@@ -176,7 +176,7 @@ const tier1 = [
       "shooting": false,
       "rebounding": true,
       "ballhandling": true,
-      "defense": true,
+      "defense": false,
       "passing": true,
       "scoring": true
     },
@@ -250,6 +250,15 @@ const tier1 = [
       "ballhandling": false,
       "defense": false,
       "passing": false,
+      "scoring": true
+    },
+    {
+      "Player": "Russell Westbrook",
+      "shooting": false,
+      "rebounding": true,
+      "ballhandling": true,
+      "defense": false,
+      "passing": true,
       "scoring": true
     },
     {
@@ -627,15 +636,7 @@ const tier2 =
   "passing": true,
   "scoring": false
 },
-{
-  "Player": "Russell Westbrook",
-  "shooting": false,
-  "rebounding": true,
-  "ballhandling": true,
-  "defense": false,
-  "passing": true,
-  "scoring": true
-},
+
 
 {
   "Player": "Mikal Bridges",
@@ -923,7 +924,7 @@ const tier2 =
   "Player": "Taurean Prince",
   "shooting": false,
   "rebounding": true,
-  "ballhandling": false,
+  "ballhandling": true,
   "defense": false,
   "passing": false,
   "scoring": false
@@ -1042,7 +1043,7 @@ const tier2 =
 {
   "Player": "Bogdan Bogdanović",
   "shooting": true,
-  "rebounding": false,
+  "rebounding": true,
   "ballhandling": true,
   "defense": false,
   "passing": true,
@@ -1486,7 +1487,7 @@ const tier2 =
   "shooting": false,
   "rebounding": false,
   "ballhandling": false,
-  "defense": false,
+  "defense": true,
   "passing": false,
   "scoring": false
 },
@@ -1779,7 +1780,7 @@ const tier2 =
   "shooting": true,
   "rebounding": true,
   "ballhandling": true,
-  "defense": true,
+  "defense": false,
   "passing": true,
   "scoring": true
 },
@@ -2006,7 +2007,7 @@ const tier2 =
   "shooting": false,
   "rebounding": true,
   "ballhandling": true,
-  "defense": true,
+  "defense": false,
   "passing": true,
   "scoring": true
 },
@@ -2565,7 +2566,7 @@ const tier2 =
 
 {
   "Player": "Anthony Tolliver",
-  "shooting": false,
+  "shooting": true,
   "rebounding": false,
   "ballhandling": false,
   "defense": false,
@@ -3147,7 +3148,7 @@ const tier2 =
   "shooting": false,
   "rebounding": false,
   "ballhandling": false,
-  "defense": false,
+  "defense": true,
   "passing": false,
   "scoring": false
 },
