@@ -117,6 +117,27 @@ function goBack () {
   weaknesses.innerText = "None."
 }
 
+var json;
+$.getJSON("players_with_position.json", function(data) {
+  json = data;
+});
+
+function findComps(profile, tier) {
+  players = json.find(a => a["tier"] == tier)["players"]
+  return players.filter(function(v, i) {
+    positionMatch = comparePositions(v.Pos, profile.positions);
+    return (positionMatch && v.shooting == profile.shooting && v.ballhandling == profile.ballhandling && v.defense == profile.defense && v.passing == profile.passing && v.rebounding == profile.rebounding && v.scoring == profile.scoring)
+  })
+}
+
+function comparePositions(playerPosition, positionList) {
+  if (positionList.length > 0) {
+    return (new RegExp(positionList.join("|")).test(playerPosition));
+  } else {
+    return true;
+  }
+}
+
 //hide the slider bars and bring up the scouting report page
 function fillProfile () {
   //fill strengths and weaknesses arrays by descriptions
@@ -140,8 +161,8 @@ function fillProfile () {
 
   document.getElementById("banner").innerText = "DRAFT PROFILE: " + document.getElementById("name").value.toUpperCase()
   setProfile()
-  document.getElementById("high-comps").innerText = (findHighComps(myProfile).length > 0) ? findHighComps(myProfile).map(a => a.Player).join(", ") : "No matching comps."
-  document.getElementById("low-comps").innerText = (findLowComps(myProfile).length > 0) ? findLowComps(myProfile).map(a => a.Player).join(", ") : "No matching comps."
+  document.getElementById("high-comps").innerText = (findComps(myProfile, 1).length > 0) ? findComps(myProfile, 1).map(a => a.Player).join(", ") : "No matching comps."
+  document.getElementById("low-comps").innerText = (findComps(myProfile, 2).length > 0) ? findComps(myProfile, 2).map(a => a.Player).join(", ") : "No matching comps."
   document.getElementById("pick-range").innerText = pickRange()
   
 }
@@ -188,6 +209,18 @@ let myProfile = {
   myProfile.defense = (document.getElementById("defense-slider").value > 50)
   myProfile.rebounding = (document.getElementById("rebounding-slider").value > 50)
   myProfile.scoring = (document.getElementById("scoring-slider").value > 50)
+  myProfile.positions = getPositions()
+}
+
+function getPositions() {
+  $selectedPositions = $("#position-select").find("input:checked");
+  if ($selectedPositions.length > 0) {
+    return $selectedPositions.map(function(idx, element) {
+      return $(element).val();
+    }).get();
+  } else {
+    return [];
+  }
 }
 
 
