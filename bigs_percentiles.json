@@ -1,7 +1,7 @@
 [
     {
       "Player": "Steven Adams",
-      "3p_Percentile": 0.526,
+      "three_Percentile": 0.526,
       "points_Percentile": 0.528,
       "rebounding_Percentile": 0.817,
       "assist_Percentile": 0.772,
@@ -17,7 +17,7 @@
     },
     {
       "Player": "LaMarcus Aldridge",
-      "3p_Percentile": 0.84,
+      "three_Percentile": 0.84,
       "points_Percentile": 0.878,
       "rebounding_Percentile": 0.261,
       "assist_Percentile": 0.661,
@@ -33,7 +33,7 @@
     },
     {
       "Player": "Jarrett Allen",
-      "3p_Percentile": 0,
+      "three_Percentile": 0,
       "points_Percentile": 0.572,
       "rebounding_Percentile": 0.856,
       "assist_Percentile": 0.467,
@@ -49,7 +49,7 @@
     },
     {
       "Player": "Ryan Anderson",
-      "3p_Percentile": 0.212,
+      "three_Percentile": 0.212,
       "points_Percentile": 0.339,
       "rebounding_Percentile": 0.978,
       "assist_Percentile": 0.956,
@@ -65,7 +65,7 @@
     },
     {
       "Player": "Deandre Ayton",
-      "3p_Percentile": 0.269,
+      "three_Percentile": 0.269,
       "points_Percentile": 0.856,
       "rebounding_Percentile": 0.833,
       "assist_Percentile": 0.467,
@@ -81,7 +81,7 @@
     },
     {
       "Player": "Mo Bamba",
-      "3p_Percentile": 0.628,
+      "three_Percentile": 0.628,
       "points_Percentile": 0.417,
       "rebounding_Percentile": 0.806,
       "assist_Percentile": 0.25,
@@ -97,7 +97,7 @@
     },
     {
       "Player": "Aron Baynes",
-      "3p_Percentile": 0.641,
+      "three_Percentile": 0.641,
       "points_Percentile": 0.783,
       "rebounding_Percentile": 0.433,
       "assist_Percentile": 0.661,
@@ -113,7 +113,7 @@
     },
     {
       "Player": "Khem Birch",
-      "3p_Percentile": 0,
+      "three_Percentile": 0,
       "points_Percentile": 0.089,
       "rebounding_Percentile": 0.378,
       "assist_Percentile": 0.417,
@@ -129,7 +129,7 @@
     },
     {
       "Player": "Goga Bitadze",
-      "3p_Percentile": 0.199,
+      "three_Percentile": 0.199,
       "points_Percentile": 0.361,
       "rebounding_Percentile": 0.289,
       "assist_Percentile": 0.322,
@@ -145,7 +145,7 @@
     },
     {
       "Player": "Bismack Biyombo",
-      "3p_Percentile": 0,
+      "three_Percentile": 0,
       "points_Percentile": 0.439,
       "rebounding_Percentile": 0.611,
       "assist_Percentile": 0.25,
@@ -161,7 +161,7 @@
     },
     {
       "Player": "Marques Bolden",
-      "3p_Percentile": 0,
+      "three_Percentile": 0,
       "points_Percentile": 0,
       "rebounding_Percentile": 0.994,
       "assist_Percentile": 0,
@@ -177,7 +177,7 @@
     },
     {
       "Player": "Tony Bradley",
-      "3p_Percentile": 0,
+      "three_Percentile": 0,
       "points_Percentile": 0.617,
       "rebounding_Percentile": 0.906,
       "assist_Percentile": 0.117,
@@ -193,7 +193,7 @@
     },
     {
       "Player": "Moses Brown",
-      "3p_Percentile": 0,
+      "three_Percentile": 0,
       "points_Percentile": 0.267,
       "rebounding_Percentile": 0.928,
       "assist_Percentile": 0.072,
@@ -209,7 +209,7 @@
     },
     {
       "Player": "Thomas Bryant",
-      "3p_Percentile": 0.904,
+      "three_Percentile": 0.904,
       "points_Percentile": 0.806,
       "rebounding_Percentile": 0.572,
       "assist_Percentile": 0.661,
@@ -225,7 +225,7 @@
     },
     {
       "Player": "Bruno Caboclo",
-      "3p_Percentile": 0.186,
+      "three_Percentile": 0.186,
       "points_Percentile": 0.378,
       "rebounding_Percentile": 0.411,
       "assist_Percentile": 0.322,
@@ -241,7 +241,7 @@
     },
     {
       "Player": "Devontae Cacok",
-      "3p_Percentile": 0,
+      "three_Percentile": 0,
       "points_Percentile": 0.95,
       "rebounding_Percentile": 0.989,
       "assist_Percentile": 0.894,
@@ -257,7 +257,7 @@
     },
     {
       "Player": "Clint Capela",
-      "3p_Percentile": 0,
+      "three_Percentile": 0,
       "points_Percentile": 0.594,
       "rebounding_Percentile": 0.922,
       "assist_Percentile": 0.167,
@@ -273,7 +273,7 @@
     },
     {
       "Player": "Wendell Carter Jr.",
-      "3p_Percentile": 0.244,
+      "three_Percentile": 0.244,
       "points_Percentile": 0.467,
       "rebounding_Percentile": 0.739,
       "assist_Percentile": 0.194,
@@ -289,7 +289,7 @@
     },
     {
       "Player": "Willie Cauley-Stein",
-      "3p_Percentile": 0,
+      "three_Percentile": 0,
       "points_Percentile": 0.322,
       "rebounding_Percentile": 0.556,
       "assist_Percentile": 0.539,
@@ -305,7 +305,7 @@
     },
     {
       "Player": "Tyson Chandler",
-      "3p_Percentile": 0,
+      "three_Percentile": 0,
       "points_Percentile": 0.022,
       "rebounding_Percentile": 0.611,
       "assist_Percentile": 0.05,
@@ -321,7 +321,7 @@
     },
     {
       "Player": "Ed Davis",
-      "3p_Percentile": 0,
+      "three_Percentile": 0,
       "points_Percentile": 0.033,
       "rebounding_Percentile": 0.817,
       "assist_Percentile": 0.167,
@@ -337,7 +337,7 @@
     },
     {
       "Player": "Dewayne Dedmon",
-      "3p_Percentile": 0.237,
+      "three_Percentile": 0.237,
       "points_Percentile": 0.261,
       "rebounding_Percentile": 0.739,
       "assist_Percentile": 0.05,
@@ -353,7 +353,7 @@
     },
     {
       "Player": "Cheick Diallo",
-      "3p_Percentile": 0.526,
+      "three_Percentile": 0.526,
       "points_Percentile": 0.683,
       "rebounding_Percentile": 0.517,
       "assist_Percentile": 0.25,
@@ -369,7 +369,7 @@
     },
     {
       "Player": "Gorgui Dieng",
-      "3p_Percentile": 0.673,
+      "three_Percentile": 0.673,
       "points_Percentile": 0.583,
       "rebounding_Percentile": 0.739,
       "assist_Percentile": 0.572,
@@ -385,7 +385,7 @@
     },
     {
       "Player": "Andre Drummond",
-      "3p_Percentile": 0.147,
+      "three_Percentile": 0.147,
       "points_Percentile": 0.817,
       "rebounding_Percentile": 0.967,
       "assist_Percentile": 0.75,
@@ -401,7 +401,7 @@
     },
     {
       "Player": "Joel Embiid",
-      "3p_Percentile": 0.513,
+      "three_Percentile": 0.513,
       "points_Percentile": 0.983,
       "rebounding_Percentile": 0.894,
       "assist_Percentile": 0.856,
@@ -417,7 +417,7 @@
     },
     {
       "Player": "Tacko Fall",
-      "3p_Percentile": 0,
+      "three_Percentile": 0,
       "points_Percentile": 0.972,
       "rebounding_Percentile": 0.956,
       "assist_Percentile": 0.072,
@@ -433,7 +433,7 @@
     },
     {
       "Player": "Derrick Favors",
-      "3p_Percentile": 0.147,
+      "three_Percentile": 0.147,
       "points_Percentile": 0.378,
       "rebounding_Percentile": 0.906,
       "assist_Percentile": 0.539,
@@ -449,7 +449,7 @@
     },
     {
       "Player": "Bruno Fernando",
-      "3p_Percentile": 0.141,
+      "three_Percentile": 0.141,
       "points_Percentile": 0.272,
       "rebounding_Percentile": 0.533,
       "assist_Percentile": 0.611,
@@ -465,7 +465,7 @@
     },
     {
       "Player": "Daniel Gafford",
-      "3p_Percentile": 0,
+      "three_Percentile": 0,
       "points_Percentile": 0.35,
       "rebounding_Percentile": 0.094,
       "assist_Percentile": 0.117,
@@ -481,7 +481,7 @@
     },
     {
       "Player": "Marc Gasol",
-      "3p_Percentile": 0.801,
+      "three_Percentile": 0.801,
       "points_Percentile": 0.178,
       "rebounding_Percentile": 0.35,
       "assist_Percentile": 0.928,
@@ -497,7 +497,7 @@
     },
     {
       "Player": "Taj Gibson",
-      "3p_Percentile": 0.417,
+      "three_Percentile": 0.417,
       "points_Percentile": 0.378,
       "rebounding_Percentile": 0.467,
       "assist_Percentile": 0.322,
@@ -513,7 +513,7 @@
     },
     {
       "Player": "Rudy Gobert",
-      "3p_Percentile": 0,
+      "three_Percentile": 0,
       "points_Percentile": 0.644,
       "rebounding_Percentile": 0.889,
       "assist_Percentile": 0.217,
@@ -529,7 +529,7 @@
     },
     {
       "Player": "Montrezl Harrell",
-      "3p_Percentile": 0,
+      "three_Percentile": 0,
       "points_Percentile": 0.956,
       "rebounding_Percentile": 0.456,
       "assist_Percentile": 0.506,
@@ -545,7 +545,7 @@
     },
     {
       "Player": "Isaiah Hartenstein",
-      "3p_Percentile": 0,
+      "three_Percentile": 0,
       "points_Percentile": 0.517,
       "rebounding_Percentile": 0.794,
       "assist_Percentile": 0.572,
@@ -561,7 +561,7 @@
     },
     {
       "Player": "Jaxson Hayes",
-      "3p_Percentile": 0.321,
+      "three_Percentile": 0.321,
       "points_Percentile": 0.639,
       "rebounding_Percentile": 0.378,
       "assist_Percentile": 0.361,
@@ -577,7 +577,7 @@
     },
     {
       "Player": "Dewan Hernandez",
-      "3p_Percentile": 0.962,
+      "three_Percentile": 0.962,
       "points_Percentile": 0.75,
       "rebounding_Percentile": 0.978,
       "assist_Percentile": 0.883,
@@ -593,7 +593,7 @@
     },
     {
       "Player": "Willy Hernangómez",
-      "3p_Percentile": 0.263,
+      "three_Percentile": 0.263,
       "points_Percentile": 0.767,
       "rebounding_Percentile": 0.844,
       "assist_Percentile": 0.728,
@@ -609,7 +609,7 @@
     },
     {
       "Player": "Richaun Holmes",
-      "3p_Percentile": 0,
+      "three_Percentile": 0,
       "points_Percentile": 0.628,
       "rebounding_Percentile": 0.572,
       "assist_Percentile": 0.117,
@@ -625,7 +625,7 @@
     },
     {
       "Player": "Al Horford",
-      "3p_Percentile": 0.635,
+      "three_Percentile": 0.635,
       "points_Percentile": 0.478,
       "rebounding_Percentile": 0.289,
       "assist_Percentile": 0.944,
@@ -641,7 +641,7 @@
     },
     {
       "Player": "Dwight Howard",
-      "3p_Percentile": 0.994,
+      "three_Percentile": 0.994,
       "points_Percentile": 0.5,
       "rebounding_Percentile": 0.883,
       "assist_Percentile": 0.117,
@@ -657,7 +657,7 @@
     },
     {
       "Player": "Serge Ibaka",
-      "3p_Percentile": 0.801,
+      "three_Percentile": 0.801,
       "points_Percentile": 0.878,
       "rebounding_Percentile": 0.65,
       "assist_Percentile": 0.361,
@@ -673,7 +673,7 @@
     },
     {
       "Player": "Jaren Jackson Jr.",
-      "3p_Percentile": 0.872,
+      "three_Percentile": 0.872,
       "points_Percentile": 0.906,
       "rebounding_Percentile": 0.044,
       "assist_Percentile": 0.25,
@@ -689,7 +689,7 @@
     },
     {
       "Player": "Nikola Jokić",
-      "3p_Percentile": 0.474,
+      "three_Percentile": 0.474,
       "points_Percentile": 0.917,
       "rebounding_Percentile": 0.65,
       "assist_Percentile": 1,
@@ -705,7 +705,7 @@
     },
     {
       "Player": "Damian Jones",
-      "3p_Percentile": 0.25,
+      "three_Percentile": 0.25,
       "points_Percentile": 0.289,
       "rebounding_Percentile": 0.333,
       "assist_Percentile": 0.167,
@@ -721,7 +721,7 @@
     },
     {
       "Player": "DeAndre Jordan",
-      "3p_Percentile": 0,
+      "three_Percentile": 0,
       "points_Percentile": 0.417,
       "rebounding_Percentile": 0.956,
       "assist_Percentile": 0.772,
@@ -737,7 +737,7 @@
     },
     {
       "Player": "Mfiondu Kabengele",
-      "3p_Percentile": 0.955,
+      "three_Percentile": 0.955,
       "points_Percentile": 0.944,
       "rebounding_Percentile": 0.078,
       "assist_Percentile": 0.072,
@@ -753,7 +753,7 @@
     },
     {
       "Player": "Frank Kaminsky",
-      "3p_Percentile": 0.513,
+      "three_Percentile": 0.513,
       "points_Percentile": 0.739,
       "rebounding_Percentile": 0.306,
       "assist_Percentile": 0.839,
@@ -769,7 +769,7 @@
     },
     {
       "Player": "Enes Kanter",
-      "3p_Percentile": 0.147,
+      "three_Percentile": 0.147,
       "points_Percentile": 0.717,
       "rebounding_Percentile": 0.939,
       "assist_Percentile": 0.467,
@@ -785,7 +785,7 @@
     },
     {
       "Player": "Maxi Kleber",
-      "3p_Percentile": 0.744,
+      "three_Percentile": 0.744,
       "points_Percentile": 0.322,
       "rebounding_Percentile": 0.189,
       "assist_Percentile": 0.25,
@@ -801,7 +801,7 @@
     },
     {
       "Player": "Luke Kornet",
-      "3p_Percentile": 0.423,
+      "three_Percentile": 0.423,
       "points_Percentile": 0.444,
       "rebounding_Percentile": 0.022,
       "assist_Percentile": 0.467,
@@ -817,7 +817,7 @@
     },
     {
       "Player": "Skal Labissière",
-      "3p_Percentile": 0.269,
+      "three_Percentile": 0.269,
       "points_Percentile": 0.272,
       "rebounding_Percentile": 0.594,
       "assist_Percentile": 0.694,
@@ -833,7 +833,7 @@
     },
     {
       "Player": "Alex Len",
-      "3p_Percentile": 0.378,
+      "three_Percentile": 0.378,
       "points_Percentile": 0.678,
       "rebounding_Percentile": 0.767,
       "assist_Percentile": 0.361,
@@ -849,7 +849,7 @@
     },
     {
       "Player": "Meyers Leonard",
-      "3p_Percentile": 0.917,
+      "three_Percentile": 0.917,
       "points_Percentile": 0.2,
       "rebounding_Percentile": 0.433,
       "assist_Percentile": 0.361,
@@ -865,7 +865,7 @@
     },
     {
       "Player": "Kevon Looney",
-      "3p_Percentile": 0.135,
+      "three_Percentile": 0.135,
       "points_Percentile": 0.122,
       "rebounding_Percentile": 0.433,
       "assist_Percentile": 0.694,
@@ -881,7 +881,7 @@
     },
     {
       "Player": "Brook Lopez",
-      "3p_Percentile": 0.474,
+      "three_Percentile": 0.474,
       "points_Percentile": 0.656,
       "rebounding_Percentile": 0.078,
       "assist_Percentile": 0.417,
@@ -897,7 +897,7 @@
     },
     {
       "Player": "Robin Lopez",
-      "3p_Percentile": 0.526,
+      "three_Percentile": 0.526,
       "points_Percentile": 0.4,
       "rebounding_Percentile": 0.067,
       "assist_Percentile": 0.25,
@@ -913,7 +913,7 @@
     },
     {
       "Player": "Ian Mahinmi",
-      "3p_Percentile": 0.205,
+      "three_Percentile": 0.205,
       "points_Percentile": 0.3,
       "rebounding_Percentile": 0.5,
       "assist_Percentile": 0.506,
@@ -929,7 +929,7 @@
     },
     {
       "Player": "Thon Maker",
-      "3p_Percentile": 0.609,
+      "three_Percentile": 0.609,
       "points_Percentile": 0.35,
       "rebounding_Percentile": 0.228,
       "assist_Percentile": 0.417,
@@ -945,7 +945,7 @@
     },
     {
       "Player": "Boban Marjanović",
-      "3p_Percentile": 0.295,
+      "three_Percentile": 0.295,
       "points_Percentile": 0.967,
       "rebounding_Percentile": 0.972,
       "assist_Percentile": 0.25,
@@ -961,7 +961,7 @@
     },
     {
       "Player": "JaVale McGee",
-      "3p_Percentile": 0.962,
+      "three_Percentile": 0.962,
       "points_Percentile": 0.478,
       "rebounding_Percentile": 0.806,
       "assist_Percentile": 0.117,
@@ -977,7 +977,7 @@
     },
     {
       "Player": "Nicolò Melli",
-      "3p_Percentile": 0.583,
+      "three_Percentile": 0.583,
       "points_Percentile": 0.417,
       "rebounding_Percentile": 0.078,
       "assist_Percentile": 0.728,
@@ -993,7 +993,7 @@
     },
     {
       "Player": "Mike Muscala",
-      "3p_Percentile": 0.788,
+      "three_Percentile": 0.788,
       "points_Percentile": 0.478,
       "rebounding_Percentile": 0.128,
       "assist_Percentile": 0.611,
@@ -1009,7 +1009,7 @@
     },
     {
       "Player": "Larry Nance Jr.",
-      "3p_Percentile": 0.654,
+      "three_Percentile": 0.654,
       "points_Percentile": 0.444,
       "rebounding_Percentile": 0.533,
       "assist_Percentile": 0.761,
@@ -1025,7 +1025,7 @@
     },
     {
       "Player": "Joakim Noah",
-      "3p_Percentile": 0,
+      "three_Percentile": 0,
       "points_Percentile": 0.161,
       "rebounding_Percentile": 0.717,
       "assist_Percentile": 0.95,
@@ -1041,7 +1041,7 @@
     },
     {
       "Player": "Nerlens Noel",
-      "3p_Percentile": 0.526,
+      "three_Percentile": 0.526,
       "points_Percentile": 0.5,
       "rebounding_Percentile": 0.483,
       "assist_Percentile": 0.322,
@@ -1057,7 +1057,7 @@
     },
     {
       "Player": "Jusuf Nurkić",
-      "3p_Percentile": 0.212,
+      "three_Percentile": 0.212,
       "points_Percentile": 0.856,
       "rebounding_Percentile": 0.756,
       "assist_Percentile": 0.928,
@@ -1073,7 +1073,7 @@
     },
     {
       "Player": "Kyle O'Quinn",
-      "3p_Percentile": 0.365,
+      "three_Percentile": 0.365,
       "points_Percentile": 0.244,
       "rebounding_Percentile": 0.872,
       "assist_Percentile": 0.978,
@@ -1089,7 +1089,7 @@
     },
     {
       "Player": "Jahlil Okafor",
-      "3p_Percentile": 0.526,
+      "three_Percentile": 0.526,
       "points_Percentile": 0.794,
       "rebounding_Percentile": 0.517,
       "assist_Percentile": 0.75,
@@ -1105,7 +1105,7 @@
     },
     {
       "Player": "Kelly Olynyk",
-      "3p_Percentile": 0.897,
+      "three_Percentile": 0.897,
       "points_Percentile": 0.583,
       "rebounding_Percentile": 0.333,
       "assist_Percentile": 0.789,
@@ -1121,7 +1121,7 @@
     },
     {
       "Player": "Anžejs Pasečņiks",
-      "3p_Percentile": 0,
+      "three_Percentile": 0,
       "points_Percentile": 0.339,
       "rebounding_Percentile": 0.4,
       "assist_Percentile": 0.194,
@@ -1137,7 +1137,7 @@
     },
     {
       "Player": "Justin Patton",
-      "3p_Percentile": 0.321,
+      "three_Percentile": 0.321,
       "points_Percentile": 0.406,
       "rebounding_Percentile": 0.2,
       "assist_Percentile": 0.761,
@@ -1153,7 +1153,7 @@
     },
     {
       "Player": "Norvel Pelle",
-      "3p_Percentile": 0,
+      "three_Percentile": 0,
       "points_Percentile": 0.106,
       "rebounding_Percentile": 0.689,
       "assist_Percentile": 0.117,
@@ -1169,7 +1169,7 @@
     },
     {
       "Player": "Mason Plumlee",
-      "3p_Percentile": 0,
+      "three_Percentile": 0,
       "points_Percentile": 0.539,
       "rebounding_Percentile": 0.611,
       "assist_Percentile": 0.961,
@@ -1185,7 +1185,7 @@
     },
     {
       "Player": "Jakob Poeltl",
-      "3p_Percentile": 0,
+      "three_Percentile": 0,
       "points_Percentile": 0.217,
       "rebounding_Percentile": 0.717,
       "assist_Percentile": 0.856,
@@ -1201,7 +1201,7 @@
     },
     {
       "Player": "Vincent Poirier",
-      "3p_Percentile": 0.962,
+      "three_Percentile": 0.962,
       "points_Percentile": 0.217,
       "rebounding_Percentile": 0.767,
       "assist_Percentile": 0.506,
@@ -1217,7 +1217,7 @@
     },
     {
       "Player": "Bobby Portis",
-      "3p_Percentile": 0.692,
+      "three_Percentile": 0.692,
       "points_Percentile": 0.733,
       "rebounding_Percentile": 0.394,
       "assist_Percentile": 0.611,
@@ -1233,7 +1233,7 @@
     },
     {
       "Player": "Dwight Powell",
-      "3p_Percentile": 0.353,
+      "three_Percentile": 0.353,
       "points_Percentile": 0.322,
       "rebounding_Percentile": 0.228,
       "assist_Percentile": 0.417,
@@ -1249,7 +1249,7 @@
     },
     {
       "Player": "Naz Reid",
-      "3p_Percentile": 0.5,
+      "three_Percentile": 0.5,
       "points_Percentile": 0.828,
       "rebounding_Percentile": 0.422,
       "assist_Percentile": 0.611,
@@ -1265,7 +1265,7 @@
     },
     {
       "Player": "Mitchell Robinson",
-      "3p_Percentile": 0,
+      "three_Percentile": 0,
       "points_Percentile": 0.556,
       "rebounding_Percentile": 0.639,
       "assist_Percentile": 0.044,
@@ -1281,7 +1281,7 @@
     },
     {
       "Player": "Domantas Sabonis",
-      "3p_Percentile": 0.346,
+      "three_Percentile": 0.346,
       "points_Percentile": 0.806,
       "rebounding_Percentile": 0.844,
       "assist_Percentile": 0.961,
@@ -1297,7 +1297,7 @@
     },
     {
       "Player": "Daniel Theis",
-      "3p_Percentile": 0.526,
+      "three_Percentile": 0.526,
       "points_Percentile": 0.444,
       "rebounding_Percentile": 0.517,
       "assist_Percentile": 0.661,
@@ -1313,7 +1313,7 @@
     },
     {
       "Player": "Tristan Thompson",
-      "3p_Percentile": 0.859,
+      "three_Percentile": 0.859,
       "points_Percentile": 0.5,
       "rebounding_Percentile": 0.783,
       "assist_Percentile": 0.611,
@@ -1329,7 +1329,7 @@
     },
     {
       "Player": "Karl-Anthony Towns",
-      "3p_Percentile": 0.91,
+      "three_Percentile": 0.91,
       "points_Percentile": 0.989,
       "rebounding_Percentile": 0.717,
       "assist_Percentile": 0.928,
@@ -1345,7 +1345,7 @@
     },
     {
       "Player": "Myles Turner",
-      "3p_Percentile": 0.609,
+      "three_Percentile": 0.609,
       "points_Percentile": 0.533,
       "rebounding_Percentile": 0.261,
       "assist_Percentile": 0.167,
@@ -1361,7 +1361,7 @@
     },
     {
       "Player": "Jonas Valančiūnas",
-      "3p_Percentile": 0.654,
+      "three_Percentile": 0.654,
       "points_Percentile": 0.867,
       "rebounding_Percentile": 0.933,
       "assist_Percentile": 0.661,
@@ -1377,7 +1377,7 @@
     },
     {
       "Player": "Nikola Vučević",
-      "3p_Percentile": 0.596,
+      "three_Percentile": 0.596,
       "points_Percentile": 0.9,
       "rebounding_Percentile": 0.783,
       "assist_Percentile": 0.894,
@@ -1393,7 +1393,7 @@
     },
     {
       "Player": "Moritz Wagner",
-      "3p_Percentile": 0.468,
+      "three_Percentile": 0.468,
       "points_Percentile": 0.694,
       "rebounding_Percentile": 0.467,
       "assist_Percentile": 0.572,
@@ -1409,7 +1409,7 @@
     },
     {
       "Player": "Hassan Whiteside",
-      "3p_Percentile": 0.987,
+      "three_Percentile": 0.987,
       "points_Percentile": 0.789,
       "rebounding_Percentile": 0.95,
       "assist_Percentile": 0.167,
@@ -1425,7 +1425,7 @@
     },
     {
       "Player": "Johnathan Williams",
-      "3p_Percentile": 0,
+      "three_Percentile": 0,
       "points_Percentile": 0.111,
       "rebounding_Percentile": 0.839,
       "assist_Percentile": 0.217,
@@ -1441,7 +1441,7 @@
     },
     {
       "Player": "Robert Williams",
-      "3p_Percentile": 0,
+      "three_Percentile": 0,
       "points_Percentile": 0.467,
       "rebounding_Percentile": 0.767,
       "assist_Percentile": 0.611,
@@ -1457,7 +1457,7 @@
     },
     {
       "Player": "Cody Zeller",
-      "3p_Percentile": 0.301,
+      "three_Percentile": 0.301,
       "points_Percentile": 0.717,
       "rebounding_Percentile": 0.65,
       "assist_Percentile": 0.572,
@@ -1473,7 +1473,7 @@
     },
     {
       "Player": "Tyler Zeller",
-      "3p_Percentile": 0,
+      "three_Percentile": 0,
       "points_Percentile": 0.75,
       "rebounding_Percentile": 1,
       "assist_Percentile": 0,
@@ -1489,7 +1489,7 @@
     },
     {
       "Player": "Ivica Zubac",
-      "3p_Percentile": 0,
+      "three_Percentile": 0,
       "points_Percentile": 0.661,
       "rebounding_Percentile": 0.917,
       "assist_Percentile": 0.506,
@@ -1505,7 +1505,7 @@
     },
     {
       "Player": "Ante Žižić",
-      "3p_Percentile": 0,
+      "three_Percentile": 0,
       "points_Percentile": 0.628,
       "rebounding_Percentile": 0.611,
       "assist_Percentile": 0.05,
@@ -1521,7 +1521,7 @@
     },
     {
       "Player": "Jordan Bell",
-      "3p_Percentile": 0.526,
+      "three_Percentile": 0.526,
       "points_Percentile": 0.361,
       "rebounding_Percentile": 0.711,
       "assist_Percentile": 0.539,
@@ -1537,7 +1537,7 @@
     },
     {
       "Player": "Noah Vonleh",
-      "3p_Percentile": 0.212,
+      "three_Percentile": 0.212,
       "points_Percentile": 0.3,
       "rebounding_Percentile": 0.761,
       "assist_Percentile": 0.694,
@@ -1553,7 +1553,7 @@
     },
     {
       "Player": "Bam Adebayo",
-      "3p_Percentile": 0.147,
+      "three_Percentile": 0.147,
       "points_Percentile": 0.706,
       "rebounding_Percentile": 0.639,
       "assist_Percentile": 0.972,
@@ -1569,7 +1569,7 @@
     },
     {
       "Player": "Kyle Alexander",
-      "3p_Percentile": 0,
+      "three_Percentile": 0,
       "points_Percentile": 0.017,
       "rebounding_Percentile": 0.322,
       "assist_Percentile": 0,
@@ -1585,7 +1585,7 @@
     },
     {
       "Player": "Al-Farouq Aminu",
-      "3p_Percentile": 0.321,
+      "three_Percentile": 0.321,
       "points_Percentile": 0.05,
       "rebounding_Percentile": 0.306,
       "assist_Percentile": 0.417,
@@ -1601,7 +1601,7 @@
     },
     {
       "Player": "Kyle Anderson",
-      "3p_Percentile": 0.41,
+      "three_Percentile": 0.41,
       "points_Percentile": 0.183,
       "rebounding_Percentile": 0.228,
       "assist_Percentile": 0.922,
@@ -1617,7 +1617,7 @@
     },
     {
       "Player": "Giannis Antetokounmpo",
-      "3p_Percentile": 0.449,
+      "three_Percentile": 0.449,
       "points_Percentile": 1,
       "rebounding_Percentile": 0.944,
       "assist_Percentile": 0.983,
@@ -1633,7 +1633,7 @@
     },
     {
       "Player": "Kostas Antetokounmpo",
-      "3p_Percentile": 0,
+      "three_Percentile": 0,
       "points_Percentile": 0.3,
       "rebounding_Percentile": 0.022,
       "assist_Percentile": 0.856,
@@ -1649,7 +1649,7 @@
     },
     {
       "Player": "Marvin Bagley III",
-      "3p_Percentile": 0.186,
+      "three_Percentile": 0.186,
       "points_Percentile": 0.839,
       "rebounding_Percentile": 0.583,
       "assist_Percentile": 0.072,
@@ -1665,7 +1665,7 @@
     },
     {
       "Player": "Dāvis Bertāns",
-      "3p_Percentile": 0.936,
+      "three_Percentile": 0.936,
       "points_Percentile": 0.8,
       "rebounding_Percentile": 0.039,
       "assist_Percentile": 0.467,
@@ -1681,7 +1681,7 @@
     },
     {
       "Player": "Nemanja Bjelica",
-      "3p_Percentile": 0.923,
+      "three_Percentile": 0.923,
       "points_Percentile": 0.539,
       "rebounding_Percentile": 0.306,
       "assist_Percentile": 0.856,
@@ -1697,7 +1697,7 @@
     },
     {
       "Player": "Jonah Bolden",
-      "3p_Percentile": 0,
+      "three_Percentile": 0,
       "points_Percentile": 0.061,
       "rebounding_Percentile": 0.139,
       "assist_Percentile": 0,
@@ -1713,7 +1713,7 @@
     },
     {
       "Player": "Chris Boucher",
-      "3p_Percentile": 0.494,
+      "three_Percentile": 0.494,
       "points_Percentile": 0.761,
       "rebounding_Percentile": 0.794,
       "assist_Percentile": 0.072,
@@ -1729,7 +1729,7 @@
     },
     {
       "Player": "Jarrell Brantley",
-      "3p_Percentile": 0.269,
+      "three_Percentile": 0.269,
       "points_Percentile": 0.111,
       "rebounding_Percentile": 0.2,
       "assist_Percentile": 0.906,
@@ -1745,7 +1745,7 @@
     },
     {
       "Player": "Marquese Chriss",
-      "3p_Percentile": 0.231,
+      "three_Percentile": 0.231,
       "points_Percentile": 0.683,
       "rebounding_Percentile": 0.65,
       "assist_Percentile": 0.811,
@@ -1761,7 +1761,7 @@
     },
     {
       "Player": "Gary Clark",
-      "3p_Percentile": 0.641,
+      "three_Percentile": 0.641,
       "points_Percentile": 0.156,
       "rebounding_Percentile": 0.156,
       "assist_Percentile": 0.072,
@@ -1777,7 +1777,7 @@
     },
     {
       "Player": "Brandon Clarke",
-      "3p_Percentile": 0.705,
+      "three_Percentile": 0.705,
       "points_Percentile": 0.817,
       "rebounding_Percentile": 0.483,
       "assist_Percentile": 0.506,
@@ -1793,7 +1793,7 @@
     },
     {
       "Player": "Nicolas Claxton",
-      "3p_Percentile": 0.147,
+      "three_Percentile": 0.147,
       "points_Percentile": 0.317,
       "rebounding_Percentile": 0.35,
       "assist_Percentile": 0.772,
@@ -1809,7 +1809,7 @@
     },
     {
       "Player": "John Collins",
-      "3p_Percentile": 0.885,
+      "three_Percentile": 0.885,
       "points_Percentile": 0.933,
       "rebounding_Percentile": 0.65,
       "assist_Percentile": 0.217,
@@ -1825,7 +1825,7 @@
     },
     {
       "Player": "Zach Collins",
-      "3p_Percentile": 0.731,
+      "three_Percentile": 0.731,
       "points_Percentile": 0.128,
       "rebounding_Percentile": 0.378,
       "assist_Percentile": 0.417,
@@ -1841,7 +1841,7 @@
     },
     {
       "Player": "Tyler Cook",
-      "3p_Percentile": 0,
+      "three_Percentile": 0,
       "points_Percentile": 0.594,
       "rebounding_Percentile": 0.461,
       "assist_Percentile": 0.033,
@@ -1857,7 +1857,7 @@
     },
     {
       "Player": "Anthony Davis",
-      "3p_Percentile": 0.5,
+      "three_Percentile": 0.5,
       "points_Percentile": 0.978,
       "rebounding_Percentile": 0.5,
       "assist_Percentile": 0.811,
@@ -1873,7 +1873,7 @@
     },
     {
       "Player": "Henry Ellenson",
-      "3p_Percentile": 0,
+      "three_Percentile": 0,
       "points_Percentile": 0.011,
       "rebounding_Percentile": 0.9,
       "assist_Percentile": 0.572,
@@ -1889,7 +1889,7 @@
     },
     {
       "Player": "Drew Eubanks",
-      "3p_Percentile": 1,
+      "three_Percentile": 1,
       "points_Percentile": 0.478,
       "rebounding_Percentile": 0.7,
       "assist_Percentile": 0.417,
@@ -1905,7 +1905,7 @@
     },
     {
       "Player": "Cristiano Felício",
-      "3p_Percentile": 0,
+      "three_Percentile": 0,
       "points_Percentile": 0.072,
       "rebounding_Percentile": 0.478,
       "assist_Percentile": 0.194,
@@ -1921,7 +1921,7 @@
     },
     {
       "Player": "Dorian Finney-Smith",
-      "3p_Percentile": 0.776,
+      "three_Percentile": 0.776,
       "points_Percentile": 0.239,
       "rebounding_Percentile": 0.139,
       "assist_Percentile": 0.361,
@@ -1937,7 +1937,7 @@
     },
     {
       "Player": "Wenyen Gabriel",
-      "3p_Percentile": 0.442,
+      "three_Percentile": 0.442,
       "points_Percentile": 0.139,
       "rebounding_Percentile": 0.261,
       "assist_Percentile": 0.117,
@@ -1953,7 +1953,7 @@
     },
     {
       "Player": "Danilo Gallinari",
-      "3p_Percentile": 0.891,
+      "three_Percentile": 0.891,
       "points_Percentile": 0.922,
       "rebounding_Percentile": 0.094,
       "assist_Percentile": 0.539,
@@ -1969,7 +1969,7 @@
     },
     {
       "Player": "Harry Giles",
-      "3p_Percentile": 0,
+      "three_Percentile": 0,
       "points_Percentile": 0.706,
       "rebounding_Percentile": 0.544,
       "assist_Percentile": 0.789,
@@ -1985,7 +1985,7 @@
     },
     {
       "Player": "Aaron Gordon",
-      "3p_Percentile": 0.455,
+      "three_Percentile": 0.455,
       "points_Percentile": 0.65,
       "rebounding_Percentile": 0.35,
       "assist_Percentile": 0.906,
@@ -2001,7 +2001,7 @@
     },
     {
       "Player": "Jerami Grant",
-      "3p_Percentile": 0.84,
+      "three_Percentile": 0.84,
       "points_Percentile": 0.661,
       "rebounding_Percentile": 0.006,
       "assist_Percentile": 0.25,
@@ -2017,7 +2017,7 @@
     },
     {
       "Player": "Draymond Green",
-      "3p_Percentile": 0.404,
+      "three_Percentile": 0.404,
       "points_Percentile": 0.172,
       "rebounding_Percentile": 0.25,
       "assist_Percentile": 0.994,
@@ -2033,7 +2033,7 @@
     },
     {
       "Player": "JaMychal Green",
-      "3p_Percentile": 0.827,
+      "three_Percentile": 0.827,
       "points_Percentile": 0.25,
       "rebounding_Percentile": 0.594,
       "assist_Percentile": 0.156,
@@ -2049,7 +2049,7 @@
     },
     {
       "Player": "Blake Griffin",
-      "3p_Percentile": 0.308,
+      "three_Percentile": 0.308,
       "points_Percentile": 0.828,
       "rebounding_Percentile": 0.056,
       "assist_Percentile": 0.906,
@@ -2065,7 +2065,7 @@
     },
     {
       "Player": "Rui Hachimura",
-      "3p_Percentile": 0.423,
+      "three_Percentile": 0.423,
       "points_Percentile": 0.661,
       "rebounding_Percentile": 0.183,
       "assist_Percentile": 0.506,
@@ -2081,7 +2081,7 @@
     },
     {
       "Player": "Donta Hall",
-      "3p_Percentile": 0,
+      "three_Percentile": 0,
       "points_Percentile": 0.183,
       "rebounding_Percentile": 0.556,
       "assist_Percentile": 0.072,
@@ -2097,7 +2097,7 @@
     },
     {
       "Player": "Udonis Haslem",
-      "3p_Percentile": 0.526,
+      "three_Percentile": 0.526,
       "points_Percentile": 0.15,
       "rebounding_Percentile": 0.861,
       "assist_Percentile": 0.039,
@@ -2113,7 +2113,7 @@
     },
     {
       "Player": "John Henson",
-      "3p_Percentile": 0.25,
+      "three_Percentile": 0.25,
       "points_Percentile": 0.378,
       "rebounding_Percentile": 0.5,
       "assist_Percentile": 0.789,
@@ -2129,7 +2129,7 @@
     },
     {
       "Player": "Juan Hernangómez",
-      "3p_Percentile": 0.603,
+      "three_Percentile": 0.603,
       "points_Percentile": 0.289,
       "rebounding_Percentile": 0.35,
       "assist_Percentile": 0.25,
@@ -2145,7 +2145,7 @@
     },
     {
       "Player": "Kevin Hervey",
-      "3p_Percentile": 0.179,
+      "three_Percentile": 0.179,
       "points_Percentile": 0.25,
       "rebounding_Percentile": 0.322,
       "assist_Percentile": 0.839,
@@ -2161,7 +2161,7 @@
     },
     {
       "Player": "Mario Hezonja",
-      "3p_Percentile": 0.455,
+      "three_Percentile": 0.455,
       "points_Percentile": 0.183,
       "rebounding_Percentile": 0.217,
       "assist_Percentile": 0.467,
@@ -2177,7 +2177,7 @@
     },
     {
       "Player": "William Howard",
-      "3p_Percentile": 0,
+      "three_Percentile": 0,
       "points_Percentile": 0,
       "rebounding_Percentile": 0.033,
       "assist_Percentile": 0.728,
@@ -2193,7 +2193,7 @@
     },
     {
       "Player": "Ersan İlyasova",
-      "3p_Percentile": 0.724,
+      "three_Percentile": 0.724,
       "points_Percentile": 0.572,
       "rebounding_Percentile": 0.65,
       "assist_Percentile": 0.322,
@@ -2209,7 +2209,7 @@
     },
     {
       "Player": "Amile Jefferson",
-      "3p_Percentile": 0,
+      "three_Percentile": 0,
       "points_Percentile": 0.039,
       "rebounding_Percentile": 0.689,
       "assist_Percentile": 0.361,
@@ -2225,7 +2225,7 @@
     },
     {
       "Player": "Kyle Kuzma",
-      "3p_Percentile": 0.487,
+      "three_Percentile": 0.487,
       "points_Percentile": 0.778,
       "rebounding_Percentile": 0.106,
       "assist_Percentile": 0.361,
@@ -2241,7 +2241,7 @@
     },
     {
       "Player": "Jake Layman",
-      "3p_Percentile": 0.526,
+      "three_Percentile": 0.526,
       "points_Percentile": 0.556,
       "rebounding_Percentile": 0,
       "assist_Percentile": 0.072,
@@ -2257,7 +2257,7 @@
     },
     {
       "Player": "T.J. Leaf",
-      "3p_Percentile": 0.391,
+      "three_Percentile": 0.391,
       "points_Percentile": 0.417,
       "rebounding_Percentile": 0.717,
       "assist_Percentile": 0.194,
@@ -2273,7 +2273,7 @@
     },
     {
       "Player": "Kevin Love",
-      "3p_Percentile": 0.75,
+      "three_Percentile": 0.75,
       "points_Percentile": 0.85,
       "rebounding_Percentile": 0.683,
       "assist_Percentile": 0.856,
@@ -2289,7 +2289,7 @@
     },
     {
       "Player": "Trey Lyles",
-      "3p_Percentile": 0.827,
+      "three_Percentile": 0.827,
       "points_Percentile": 0.217,
       "rebounding_Percentile": 0.55,
       "assist_Percentile": 0.417,
@@ -2305,7 +2305,7 @@
     },
     {
       "Player": "Lauri Markkanen",
-      "3p_Percentile": 0.609,
+      "three_Percentile": 0.609,
       "points_Percentile": 0.744,
       "rebounding_Percentile": 0.217,
       "assist_Percentile": 0.322,
@@ -2321,7 +2321,7 @@
     },
     {
       "Player": "Jalen McDaniels",
-      "3p_Percentile": 0.763,
+      "three_Percentile": 0.763,
       "points_Percentile": 0.206,
       "rebounding_Percentile": 0.261,
       "assist_Percentile": 0.217,
@@ -2337,7 +2337,7 @@
     },
     {
       "Player": "Chimezie Metu",
-      "3p_Percentile": 0,
+      "three_Percentile": 0,
       "points_Percentile": 0.839,
       "rebounding_Percentile": 0.7,
       "assist_Percentile": 0.811,
@@ -2353,7 +2353,7 @@
     },
     {
       "Player": "Eric Mika",
-      "3p_Percentile": 0,
+      "three_Percentile": 0,
       "points_Percentile": 0.217,
       "rebounding_Percentile": 0.872,
       "assist_Percentile": 0,
@@ -2369,7 +2369,7 @@
     },
     {
       "Player": "Paul Millsap",
-      "3p_Percentile": 0.949,
+      "three_Percentile": 0.949,
       "points_Percentile": 0.717,
       "rebounding_Percentile": 0.35,
       "assist_Percentile": 0.572,
@@ -2385,7 +2385,7 @@
     },
     {
       "Player": "Juwan Morgan",
-      "3p_Percentile": 0.763,
+      "three_Percentile": 0.763,
       "points_Percentile": 0.139,
       "rebounding_Percentile": 0.25,
       "assist_Percentile": 0.217,
@@ -2401,7 +2401,7 @@
     },
     {
       "Player": "Markieff Morris",
-      "3p_Percentile": 0.814,
+      "three_Percentile": 0.814,
       "points_Percentile": 0.7,
       "rebounding_Percentile": 0.122,
       "assist_Percentile": 0.539,
@@ -2417,7 +2417,7 @@
     },
     {
       "Player": "Johnathan Motley",
-      "3p_Percentile": 0,
+      "three_Percentile": 0,
       "points_Percentile": 0.961,
       "rebounding_Percentile": 0.4,
       "assist_Percentile": 0.989,
@@ -2433,7 +2433,7 @@
     },
     {
       "Player": "Georges Niang",
-      "3p_Percentile": 0.878,
+      "three_Percentile": 0.878,
       "points_Percentile": 0.594,
       "rebounding_Percentile": 0.011,
       "assist_Percentile": 0.25,
@@ -2449,7 +2449,7 @@
     },
     {
       "Player": "Royce O'Neale",
-      "3p_Percentile": 0.782,
+      "three_Percentile": 0.782,
       "points_Percentile": 0.067,
       "rebounding_Percentile": 0.128,
       "assist_Percentile": 0.789,
@@ -2465,7 +2465,7 @@
     },
     {
       "Player": "Semi Ojeleye",
-      "3p_Percentile": 0.788,
+      "three_Percentile": 0.788,
       "points_Percentile": 0.1,
       "rebounding_Percentile": 0.017,
       "assist_Percentile": 0.156,
@@ -2481,7 +2481,7 @@
     },
     {
       "Player": "Tariq Owens",
-      "3p_Percentile": 0,
+      "three_Percentile": 0,
       "points_Percentile": 0.128,
       "rebounding_Percentile": 0.178,
       "assist_Percentile": 0,
@@ -2497,7 +2497,7 @@
     },
     {
       "Player": "Jabari Parker",
-      "3p_Percentile": 0.372,
+      "three_Percentile": 0.372,
       "points_Percentile": 0.889,
       "rebounding_Percentile": 0.333,
       "assist_Percentile": 0.694,
@@ -2513,7 +2513,7 @@
     },
     {
       "Player": "Eric Paschall",
-      "3p_Percentile": 0.423,
+      "three_Percentile": 0.423,
       "points_Percentile": 0.767,
       "rebounding_Percentile": 0.061,
       "assist_Percentile": 0.728,
@@ -2529,7 +2529,7 @@
     },
     {
       "Player": "Patrick Patterson",
-      "3p_Percentile": 0.853,
+      "three_Percentile": 0.853,
       "points_Percentile": 0.406,
       "rebounding_Percentile": 0.156,
       "assist_Percentile": 0.361,
@@ -2545,7 +2545,7 @@
     },
     {
       "Player": "Michael Porter Jr.",
-      "3p_Percentile": 0.929,
+      "three_Percentile": 0.929,
       "points_Percentile": 0.867,
       "rebounding_Percentile": 0.556,
       "assist_Percentile": 0.322,
@@ -2561,7 +2561,7 @@
     },
     {
       "Player": "Kristaps Porziņģis",
-      "3p_Percentile": 0.654,
+      "three_Percentile": 0.654,
       "points_Percentile": 0.928,
       "rebounding_Percentile": 0.594,
       "assist_Percentile": 0.417,
@@ -2577,7 +2577,7 @@
     },
     {
       "Player": "Julius Randle",
-      "3p_Percentile": 0.385,
+      "three_Percentile": 0.385,
       "points_Percentile": 0.894,
       "rebounding_Percentile": 0.611,
       "assist_Percentile": 0.811,
@@ -2593,7 +2593,7 @@
     },
     {
       "Player": "Mike Scott",
-      "3p_Percentile": 0.737,
+      "three_Percentile": 0.737,
       "points_Percentile": 0.283,
       "rebounding_Percentile": 0.189,
       "assist_Percentile": 0.25,
@@ -2609,7 +2609,7 @@
     },
     {
       "Player": "Thabo Sefolosha",
-      "3p_Percentile": 0.391,
+      "three_Percentile": 0.391,
       "points_Percentile": 0.056,
       "rebounding_Percentile": 0.228,
       "assist_Percentile": 0.467,
@@ -2625,7 +2625,7 @@
     },
     {
       "Player": "Pascal Siakam",
-      "3p_Percentile": 0.705,
+      "three_Percentile": 0.705,
       "points_Percentile": 0.933,
       "rebounding_Percentile": 0.2,
       "assist_Percentile": 0.839,
@@ -2641,7 +2641,7 @@
     },
     {
       "Player": "Chris Silva",
-      "3p_Percentile": 0,
+      "three_Percentile": 0,
       "points_Percentile": 0.444,
       "rebounding_Percentile": 0.861,
       "assist_Percentile": 0.572,
@@ -2657,7 +2657,7 @@
     },
     {
       "Player": "Alen Smailagić",
-      "3p_Percentile": 0.269,
+      "three_Percentile": 0.269,
       "points_Percentile": 0.594,
       "rebounding_Percentile": 0.156,
       "assist_Percentile": 0.811,
@@ -2673,7 +2673,7 @@
     },
     {
       "Player": "Omari Spellman",
-      "3p_Percentile": 0.859,
+      "three_Percentile": 0.859,
       "points_Percentile": 0.556,
       "rebounding_Percentile": 0.411,
       "assist_Percentile": 0.361,
@@ -2689,7 +2689,7 @@
     },
     {
       "Player": "Caleb Swanigan",
-      "3p_Percentile": 0,
+      "three_Percentile": 0,
       "points_Percentile": 0.078,
       "rebounding_Percentile": 0.817,
       "assist_Percentile": 0.883,
@@ -2705,7 +2705,7 @@
     },
     {
       "Player": "Anthony Tolliver",
-      "3p_Percentile": 0.59,
+      "three_Percentile": 0.59,
       "points_Percentile": 0.089,
       "rebounding_Percentile": 0.106,
       "assist_Percentile": 0.25,
@@ -2721,7 +2721,7 @@
     },
     {
       "Player": "P.J. Tucker",
-      "3p_Percentile": 0.692,
+      "three_Percentile": 0.692,
       "points_Percentile": 0.039,
       "rebounding_Percentile": 0.139,
       "assist_Percentile": 0.25,
@@ -2737,7 +2737,7 @@
     },
     {
       "Player": "Dean Wade",
-      "3p_Percentile": 0.962,
+      "three_Percentile": 0.962,
       "points_Percentile": 0.161,
       "rebounding_Percentile": 0.483,
       "assist_Percentile": 0.05,
@@ -2753,7 +2753,7 @@
     },
     {
       "Player": "P.J. Washington",
-      "3p_Percentile": 0.75,
+      "three_Percentile": 0.75,
       "points_Percentile": 0.517,
       "rebounding_Percentile": 0.117,
       "assist_Percentile": 0.611,
@@ -2769,7 +2769,7 @@
     },
     {
       "Player": "Grant Williams",
-      "3p_Percentile": 0.321,
+      "three_Percentile": 0.321,
       "points_Percentile": 0.083,
       "rebounding_Percentile": 0.067,
       "assist_Percentile": 0.539,
@@ -2785,7 +2785,7 @@
     },
     {
       "Player": "Kenrich Williams",
-      "3p_Percentile": 0.359,
+      "three_Percentile": 0.359,
       "points_Percentile": 0.028,
       "rebounding_Percentile": 0.261,
       "assist_Percentile": 0.611,
@@ -2801,7 +2801,7 @@
     },
     {
       "Player": "Marvin Williams",
-      "3p_Percentile": 0.705,
+      "three_Percentile": 0.705,
       "points_Percentile": 0.206,
       "rebounding_Percentile": 0.044,
       "assist_Percentile": 0.361,
@@ -2817,7 +2817,7 @@
     },
     {
       "Player": "Zion Williamson",
-      "3p_Percentile": 0.942,
+      "three_Percentile": 0.942,
       "points_Percentile": 0.994,
       "rebounding_Percentile": 0.289,
       "assist_Percentile": 0.694,
@@ -2833,7 +2833,7 @@
     },
     {
       "Player": "D.J. Wilson",
-      "3p_Percentile": 0.314,
+      "three_Percentile": 0.314,
       "points_Percentile": 0.372,
       "rebounding_Percentile": 0.433,
       "assist_Percentile": 0.611,
@@ -2849,7 +2849,7 @@
     },
     {
       "Player": "Christian Wood",
-      "3p_Percentile": 0.814,
+      "three_Percentile": 0.814,
       "points_Percentile": 0.906,
       "rebounding_Percentile": 0.589,
       "assist_Percentile": 0.217,
@@ -2865,7 +2865,7 @@
     },
     {
       "Player": "Thaddeus Young",
-      "3p_Percentile": 0.679,
+      "three_Percentile": 0.679,
       "points_Percentile": 0.539,
       "rebounding_Percentile": 0.172,
       "assist_Percentile": 0.661,
@@ -2881,7 +2881,7 @@
     },
     {
       "Player": "Dario Šarić",
-      "3p_Percentile": 0.686,
+      "three_Percentile": 0.686,
       "points_Percentile": 0.617,
       "rebounding_Percentile": 0.422,
       "assist_Percentile": 0.694,

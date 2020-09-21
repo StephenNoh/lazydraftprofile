@@ -24,10 +24,29 @@ function goBack () {
   document.getElementById("banner").innerText = "Find NBA Comps"
 }
 
+//old json
 var json;
 $.getJSON("players_with_position.json", function(data) {
   json = data;
 });
+
+//new jsons. declare guard, wing, big jsons
+let guard_JSON;
+$.getJSON("guards_percentiles.json", function(data) {
+  guard_JSON = data;
+});
+
+let wing_JSON;
+$.getJSON("wings_percentiles.json", function(data) {
+  wing_JSON = data;
+});
+
+let big_JSON;
+$.getJSON("bigs_percentiles.json", function(data) {
+  big_JSON = data;
+});
+
+//old findcomps function
 
 function findComps(profile, tier) {
   players = json.find(a => a["tier"] == tier)["players"]
@@ -125,3 +144,23 @@ function pickRange () {
   }
 
 }
+
+//function to generate a composite score between user (userObject) and any player (playerObject) in the json array
+function generateCompositeScore (userObject, playerObject) {
+  return (
+    Math.abs(parseFloat(userObject.passing)-parseFloat(playerObject.assist_Percentile)*100) +
+    Math.abs(parseFloat(userObject.ballhandling)-parseFloat(playerObject.turnover_Percentile)*100) +
+    Math.abs(parseFloat(userObject.shooting)-parseFloat(playerObject.three_Percentile)*100) +
+    Math.abs(parseFloat(userObject.scoring)-parseFloat(playerObject.points_Percentile)*100) +
+    Math.abs(parseFloat(userObject.rebounding)-parseFloat(playerObject.rebounding_Percentile)*100) +
+    Math.abs(parseFloat(userObject.defense)-parseFloat(playerObject.defense_Percentile)*100)
+  );
+}
+
+//let's add the composite score as a property in our json
+function addCompositeScoreProperty (player) {
+  player.compositeScore = generateCompositeScore(percentileProfile, player)
+}
+
+
+//now let's apply the functions to the jsons, sort the jsons by the composite score value, and return the names of the three players with the lowest player score (TODO)
