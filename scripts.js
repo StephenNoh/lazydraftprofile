@@ -7,8 +7,6 @@ const shooting = document.getElementById("shooting")
 const ballhandling = document.getElementById("ballhandling")
 const passing = document.getElementById("passing")
 const rebounding = document.getElementById("rebounding")
-const strengths = document.getElementById("strengths")
-const weaknesses = document.getElementById("weaknesses")
 const backButton = document.getElementById("back-button")
 let strengthsArray = []; 
 let weaknessesArray = [];
@@ -23,11 +21,7 @@ backButton.addEventListener("click", goBack)
 function goBack () {
   document.getElementById("start-form").classList.remove("hide")
   document.getElementById("profile").classList.add("hide")
-  document.getElementById("banner").innerText = "Create your NBA draft profile"
-  strengthsArray = []
-  weaknessesArray = []
-  strengths.innerText = "None."
-  weaknesses.innerText = "None."
+  document.getElementById("banner").innerText = "Find NBA Comps"
 }
 
 var json;
@@ -58,7 +52,7 @@ function fillProfile () {
   document.getElementById("start-form").classList.add("hide")
   document.getElementById("profile").classList.remove("hide")
 
-  document.getElementById("banner").innerText = "DRAFT PROFILE: " + document.getElementById("name").value.toUpperCase()
+  document.getElementById("banner").innerText = "DRAFT COMPS: " + document.getElementById("name").value.toUpperCase()
   setProfile()
   document.getElementById("high-comps").innerText = (findComps(myProfile, 1).length > 0) ? findComps(myProfile, 1).map(a => a.Player).join(", ") : "No matching comps."
   document.getElementById("low-comps").innerText = (findComps(myProfile, 2).length > 0) ? findComps(myProfile, 2).map(a => a.Player).join(", ") : "No matching comps."
@@ -70,6 +64,11 @@ function fillProfile () {
 let myProfile = {
   name: "", 
 }
+//percentile comp profile -- we will use this for the new comps algorithm
+let percentileProfile = {
+  name: "", 
+}
+
 
  function setProfile () {
   myProfile.passing = (document.getElementById("passing-slider").value > 50)
@@ -79,7 +78,16 @@ let myProfile = {
   myProfile.rebounding = (document.getElementById("rebounding-slider").value > 50)
   myProfile.scoring = (document.getElementById("scoring-slider").value > 50)
   myProfile.positions = getPositions()
+  percentileProfile.passing = (document.getElementById("passing-slider").value)
+  percentileProfile.ballhandling = (document.getElementById("ballhandling-slider").value)
+  percentileProfile.shooting = (document.getElementById("shooting-slider").value)
+  percentileProfile.defense = (document.getElementById("defense-slider").value)
+  percentileProfile.rebounding = (document.getElementById("rebounding-slider").value)
+  percentileProfile.scoring = (document.getElementById("scoring-slider").value)
+  percentileProfile.positions = getPositions()
 }
+
+
 
 function getPositions() {
   $selectedPositions = $("#position-select").find("input:checked");
