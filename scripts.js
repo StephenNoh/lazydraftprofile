@@ -81,7 +81,6 @@ let percentileProfile = {
 
  function setProfile () {
   percentileProfile.passing = (document.getElementById("passing-slider").value)
-  percentileProfile.ballhandling = (document.getElementById("ballhandling-slider").value)
   percentileProfile.shooting = (document.getElementById("shooting-slider").value)
   percentileProfile.defense = (document.getElementById("defense-slider").value)
   percentileProfile.rebounding = (document.getElementById("rebounding-slider").value)
@@ -106,23 +105,23 @@ function getPositions() {
 //pick range
 
 function pickRange () {
-  let range = parseInt(document.getElementById("passing-slider").value) + parseInt(document.getElementById("ballhandling-slider").value) + parseInt(document.getElementById("shooting-slider").value) + parseInt(document.getElementById("defense-slider").value) + parseInt(document.getElementById("rebounding-slider").value) + parseInt(document.getElementById("scoring-slider").value)
-  if (range > 550 && range < 710) {
+  let range = parseInt(document.getElementById("passing-slider").value) + parseInt(document.getElementById("shooting-slider").value) + parseInt(document.getElementById("defense-slider").value) + parseInt(document.getElementById("rebounding-slider").value) + parseInt(document.getElementById("scoring-slider").value)
+  if (range > 430 && range < 500) {
     return "Top five."
   }
-  if (range > 500 && range < 560) {
+  if (range > 360 && range < 431) {
     return "Lottery pick."
   }
-  if (range > 420 && range < 501) {
+  if (range > 280 && range < 361) {
     return "Late first round."
   }
-  if (range > 350 && range < 421) {
+  if (range > 200 && range < 281) {
     return "Second round."
   }
-  if (range > 250 && range < 351) {
+  if (range > 150 && range < 201) {
     return "Overseas."
   }
-  if (range >= 0 && range < 251) {
+  if (range >= 0 && range < 151) {
     return "Undrafted."
   }
 
@@ -132,7 +131,6 @@ function pickRange () {
 function generateCompositeScore (userObject, playerObject) {
   return (
     Math.abs(parseFloat(userObject.passing)-parseFloat(playerObject.assist_Percentile)*100) +
-    Math.abs(parseFloat(userObject.ballhandling)-parseFloat(1 - playerObject.turnover_Percentile)*100) +
     Math.abs(parseFloat(userObject.shooting)-parseFloat(playerObject.three_Percentile)*100) +
     Math.abs(parseFloat(userObject.scoring)-parseFloat(playerObject.points_Percentile)*100) +
     Math.abs(parseFloat(userObject.rebounding)-parseFloat(playerObject.rebounding_Percentile)*100) +
