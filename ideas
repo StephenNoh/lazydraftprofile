@@ -3,35 +3,21 @@ WHAT I ALREADY DID
 -removed the descriptions array, strengths, weaknesses
 -this is now strictly a find comps tool
 -added 3 different json files for three position classifications (guard, wing, big) with percentile values instead of raw numbers (more on this below)
+-changed the algorithm for finding comps
 
-IDEAS FOR IMPLEMENTATION:
+REASONS FOR CHANGES
 
 -We now have three different JSON files by position of guard/wing/big (I manually cleaned the data on these a bit to make sure the positions were right)
--user should be able to check a guard/wing/big box (we will need to redo the positions checkboxes), select values, and get their NBA comp
+-user should be able to check a guard/wing/big box, select values, and get their NBA comp
+-TODO: Right now, the app only works if one box is selected. Need to disable checking multiple position boxes.
+-TODO: Right now, the app spits out names of the top 10 comps. Need to clean up the CSS to make it look nicer (display in a table?)
+ and display statistics too instead of just names
 
-
-COMPS ALGORITHM (TODO)
--to add more sophistication over a simple true/false value for various skills, we need to develop a better algorithm
--I separated the player data into percentiles (ex. Steven Adams -- 52.6th percentile in 3pt percentage for bigs, 52.8th percentile in points for bigs, 81.7th percentile in rebounding for bigs, etc. etc.)
--when a user selects 60/100 for 3pt percentage and selects the big checkbox, my idea is for the app to iterate over all of the bigs in the JSON, then calculate a score.
-    -SCORE BASIS
+NEW COMPS ALGORITHM
+-to add more sophistication over a simple true/false value for various skills, we needed to develop a better algorithm
+-I separated the player data into percentiles (ex. Steven Adams object-- 52.6th percentile in 3pt percentage for bigs, 52.8th percentile in points for bigs, 81.7th percentile in rebounding for bigs, etc. etc.)
+-when a user selects 60/100 for 3pt percentage and selects the big checkbox, the app now iterates over all of the bigs in the JSON, then calculates a composite score.
+    -HOW SCORE IS CALCULATED:
         -take absolute value of (user input for 3pt percentage, in our example 60) - (player[x]3pt percentage, in steven adams example, 52.6) = 7.4
         -we take absolute value for every characteristic (shooting, defense, passing, etc) and add them up to get a composite score. we do this for every player in our player array.
-        -every player in the player array will then have some composite score value. the three lowest values are going to be your three closest comps. this is what we spit out in our results page
-    -example
-        -user input:
-            -80/100 shooting
-            -60/100 scoring
-            -50/100 rebounding
-            -40/100 passing
-            -30/100 ballhandling
-            -20/100 defense
-        -steven adams in our json:
-            -"Player": "Steven Adams",
-            "3p_Percentile": 0.526,
-            "points_Percentile": 0.528,
-            "rebounding_Percentile": 0.817,
-            "assist_Percentile": 0.772,
-            "turnover_Percentile": 0.544,
-            "defense_Percentile": 0.783,
-        -steven adams composite score = absolute value (80-52.6) + abs(60-52.8) + abs(50-81.7) + abs(40-77.2) + abs(30-54.4) + abs(20-78.3)
+        -every player in the player array will then have some composite score value. the 10 lowest values are going to be your 10 closest comps. this is what we spit out in our results page

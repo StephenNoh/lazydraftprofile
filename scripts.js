@@ -8,8 +8,7 @@ const ballhandling = document.getElementById("ballhandling")
 const passing = document.getElementById("passing")
 const rebounding = document.getElementById("rebounding")
 const backButton = document.getElementById("back-button")
-let strengthsArray = []; 
-let weaknessesArray = [];
+
 
 
 //event listeners for buttons
@@ -23,12 +22,6 @@ function goBack () {
   document.getElementById("profile").classList.add("hide")
   document.getElementById("banner").innerText = "Find NBA Comps"
 }
-
-//old json
-var json;
-$.getJSON("players_with_position.json", function(data) {
-  json = data;
-});
 
 //new jsons. declare guard, wing, big jsons
 let guard_JSON;
@@ -46,15 +39,7 @@ $.getJSON("bigs_percentiles.json", function(data) {
   big_JSON = data;
 });
 
-//old findcomps function
-
-function findComps(profile, tier) {
-  players = json.find(a => a["tier"] == tier)["players"]
-  return players.filter(function(v, i) {
-    positionMatch = comparePositions(v.Pos, profile.positions);
-    return (positionMatch && v.shooting == profile.shooting && v.ballhandling == profile.ballhandling && v.defense == profile.defense && v.passing == profile.passing && v.rebounding == profile.rebounding && v.scoring == profile.scoring)
-  })
-}
+//comparePositions function
 
 function comparePositions(playerPosition, positionList) {
   if (positionList.length > 0) {
@@ -73,16 +58,21 @@ function fillProfile () {
 
   document.getElementById("banner").innerText = "DRAFT COMPS: " + document.getElementById("name").value.toUpperCase()
   setProfile()
-  document.getElementById("high-comps").innerText = (findComps(myProfile, 1).length > 0) ? findComps(myProfile, 1).map(a => a.Player).join(", ") : "No matching comps."
-  document.getElementById("low-comps").innerText = (findComps(myProfile, 2).length > 0) ? findComps(myProfile, 2).map(a => a.Player).join(", ") : "No matching comps."
+  if (getPositions() == "guard") {
+    document.getElementById("comps").innerText = (generatePercentileComps(guard_JSON))
+  }
+  if (getPositions() == "wing") {
+    document.getElementById("comps").innerText = (generatePercentileComps(wing_JSON))
+  }
+  if (getPositions() == "big") {
+    document.getElementById("comps").innerText = (generatePercentileComps(big_JSON))
+  }
+  
   document.getElementById("pick-range").innerText = pickRange()
   
 }
 
 //comps
-let myProfile = {
-  name: "", 
-}
 //percentile comp profile -- we will use this for the new comps algorithm
 let percentileProfile = {
   name: "", 
@@ -90,13 +80,6 @@ let percentileProfile = {
 
 
  function setProfile () {
-  myProfile.passing = (document.getElementById("passing-slider").value > 50)
-  myProfile.ballhandling = (document.getElementById("ballhandling-slider").value > 50)
-  myProfile.shooting = (document.getElementById("shooting-slider").value > 50)
-  myProfile.defense = (document.getElementById("defense-slider").value > 50)
-  myProfile.rebounding = (document.getElementById("rebounding-slider").value > 50)
-  myProfile.scoring = (document.getElementById("scoring-slider").value > 50)
-  myProfile.positions = getPositions()
   percentileProfile.passing = (document.getElementById("passing-slider").value)
   percentileProfile.ballhandling = (document.getElementById("ballhandling-slider").value)
   percentileProfile.shooting = (document.getElementById("shooting-slider").value)
@@ -149,7 +132,7 @@ function pickRange () {
 function generateCompositeScore (userObject, playerObject) {
   return (
     Math.abs(parseFloat(userObject.passing)-parseFloat(playerObject.assist_Percentile)*100) +
-    Math.abs(parseFloat(userObject.ballhandling)-parseFloat(playerObject.turnover_Percentile)*100) +
+    Math.abs(parseFloat(userObject.ballhandling)-parseFloat(1 - playerObject.turnover_Percentile)*100) +
     Math.abs(parseFloat(userObject.shooting)-parseFloat(playerObject.three_Percentile)*100) +
     Math.abs(parseFloat(userObject.scoring)-parseFloat(playerObject.points_Percentile)*100) +
     Math.abs(parseFloat(userObject.rebounding)-parseFloat(playerObject.rebounding_Percentile)*100) +
@@ -163,4 +146,9 @@ function addCompositeScoreProperty (player) {
 }
 
 
-//now let's apply the functions to the jsons, sort the jsons by the composite score value, and return the names of the three players with the lowest player score (TODO)
+//now let's apply the functions to the jsons (either guard_JSON, wing_JSON, or big_JSON, depending on what our user selects), sort the jsons (ascending) by composite score value, and return the top 10 closest comps
+function generatePercentileComps (positional_JSON) {
+  positional_JSON.forEach(player => addCompositeScoreProperty(player))
+  positional_JSON.sort((a, b) => parseFloat(a.compositeScore) - parseFloat(b.compositeScore));
+  return positional_JSON.slice(0,10).map(a =>a.Player).join(", ")
+}
