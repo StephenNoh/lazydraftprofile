@@ -105,8 +105,17 @@ function getPositions() {
 //pick range
 
 function pickRange () {
-  let range = parseInt(document.getElementById("passing-slider").value) + parseInt(document.getElementById("shooting-slider").value) + parseInt(document.getElementById("defense-slider").value) + parseInt(document.getElementById("rebounding-slider").value) + parseInt(document.getElementById("scoring-slider").value)
-  if (range > 430 && range < 500) {
+  let range = 0;
+  let values = [parseInt(document.getElementById("passing-slider").value), parseInt(document.getElementById("shooting-slider").value), parseInt(document.getElementById("defense-slider").value), parseInt(document.getElementById("rebounding-slider").value), parseInt(document.getElementById("scoring-slider").value)]
+  for (let i = 0; i < values.length; i++) {
+    if (values[i] > 85) {
+      range += values[i]*1.75
+    }
+    else {
+      range += values[i]
+    }
+  }
+  if (range > 430) {
     return "Top five."
   }
   if (range > 360 && range < 431) {
@@ -129,16 +138,20 @@ function pickRange () {
 
 //function to generate a composite score between user (userObject) and any player (playerObject) in the json array
 
+
+//adds a weight to each characteristic 
 function characteristicGap (userProp, playerProp) {
   //adds a coefficient weight so that if difference is huge (more than 1/3 of a bar), adds more to composite score and comparison ranking drops
   if (Math.abs(parseFloat(userProp)-parseFloat(playerProp)*100) > 17) {
     return 3*Math.abs(parseFloat(userProp)-parseFloat(playerProp)*100)
   }
   else {
+  //returns a non-weighted value if there's not much of a gap
     return Math.abs(parseFloat(userProp)-parseFloat(playerProp)*100)
   }
 }
 
+//calculates composite score
 function generateCompositeScore (userObject, playerObject) {
   return (
     characteristicGap(userObject.passing, playerObject.assist_Percentile) +
@@ -149,17 +162,7 @@ function generateCompositeScore (userObject, playerObject) {
   )
 }
 
-// function generateCompositeScore (userObject, playerObject) {
-//   return (
-//     Math.abs(parseFloat(userObject.passing)-parseFloat(playerObject.assist_Percentile)*100) +
-//     Math.abs(parseFloat(userObject.shooting)-parseFloat(playerObject.three_Percentile)*100) +
-//     Math.abs(parseFloat(userObject.scoring)-parseFloat(playerObject.points_Percentile)*100) +
-//     Math.abs(parseFloat(userObject.rebounding)-parseFloat(playerObject.rebounding_Percentile)*100) +
-//     Math.abs(parseFloat(userObject.defense)-parseFloat(playerObject.defense_Percentile)*100)
-//   );
-// }
-
-//let's add the composite score as a property in our json
+//let's add the composite score as a property to each player in our json
 function addCompositeScoreProperty (player) {
   player.compositeScore = generateCompositeScore(percentileProfile, player)
 }
@@ -169,5 +172,6 @@ function addCompositeScoreProperty (player) {
 function generatePercentileComps (positional_JSON) {
   positional_JSON.forEach(player => addCompositeScoreProperty(player))
   positional_JSON.sort((a, b) => parseFloat(a.compositeScore) - parseFloat(b.compositeScore));
+  //we can change slice here to return as many results as we want
   return positional_JSON.slice(0,10).map(a =>a.Player).join(", ")
 }
