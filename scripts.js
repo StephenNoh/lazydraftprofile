@@ -128,15 +128,36 @@ function pickRange () {
 }
 
 //function to generate a composite score between user (userObject) and any player (playerObject) in the json array
+
+function characteristicGap (userProp, playerProp) {
+  //adds a coefficient weight so that if difference is huge (more than 1/3 of a bar), adds more to composite score and comparison ranking drops
+  if (Math.abs(parseFloat(userProp)-parseFloat(playerProp)*100) > 17) {
+    return 3*Math.abs(parseFloat(userProp)-parseFloat(playerProp)*100)
+  }
+  else {
+    return Math.abs(parseFloat(userProp)-parseFloat(playerProp)*100)
+  }
+}
+
 function generateCompositeScore (userObject, playerObject) {
   return (
-    Math.abs(parseFloat(userObject.passing)-parseFloat(playerObject.assist_Percentile)*100) +
-    Math.abs(parseFloat(userObject.shooting)-parseFloat(playerObject.three_Percentile)*100) +
-    Math.abs(parseFloat(userObject.scoring)-parseFloat(playerObject.points_Percentile)*100) +
-    Math.abs(parseFloat(userObject.rebounding)-parseFloat(playerObject.rebounding_Percentile)*100) +
-    Math.abs(parseFloat(userObject.defense)-parseFloat(playerObject.defense_Percentile)*100)
-  );
+    characteristicGap(userObject.passing, playerObject.assist_Percentile) +
+    characteristicGap(userObject.shooting, playerObject.three_Percentile) +
+    characteristicGap(userObject.scoring, playerObject.points_Percentile) +
+    characteristicGap(userObject.rebounding, playerObject.rebounding_Percentile) +
+    characteristicGap(userObject.defense, playerObject.defense_Percentile) 
+  )
 }
+
+// function generateCompositeScore (userObject, playerObject) {
+//   return (
+//     Math.abs(parseFloat(userObject.passing)-parseFloat(playerObject.assist_Percentile)*100) +
+//     Math.abs(parseFloat(userObject.shooting)-parseFloat(playerObject.three_Percentile)*100) +
+//     Math.abs(parseFloat(userObject.scoring)-parseFloat(playerObject.points_Percentile)*100) +
+//     Math.abs(parseFloat(userObject.rebounding)-parseFloat(playerObject.rebounding_Percentile)*100) +
+//     Math.abs(parseFloat(userObject.defense)-parseFloat(playerObject.defense_Percentile)*100)
+//   );
+// }
 
 //let's add the composite score as a property in our json
 function addCompositeScoreProperty (player) {

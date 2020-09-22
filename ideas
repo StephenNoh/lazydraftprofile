@@ -9,7 +9,10 @@ REASONS FOR CHANGES
 
 -We now have three different JSON files by position of guard/wing/big (I manually cleaned the data on these a bit to make sure the positions were right)
 -user should be able to check a guard/wing/big box, select values, and get their NBA comp
--TODO: Right now, the app only works if one box is selected. Need to disable checking multiple position boxes.
+
+TODO:
+
+-TODO: Right now, the app only works if one position box is selected. Need to disable checking multiple position boxes.
 -TODO: Right now, the app spits out names of the top 10 comps. Need to clean up the CSS to make it look nicer (display in a table?)
  and display statistics too instead of just names
 
@@ -20,4 +23,6 @@ NEW COMPS ALGORITHM
     -HOW SCORE IS CALCULATED:
         -take absolute value of (user input for 3pt percentage, in our example 60) - (player[x]3pt percentage, in steven adams example, 52.6) = 7.4
         -we take absolute value for every characteristic (shooting, defense, passing, etc) and add them up to get a composite score. we do this for every player in our player array.
+        -we multiply by a coefficient (somewhat arbitrarily set at 3 with some guess-and-check) if there is a big gulf in any one particular characteristic. 
+        -This adds a weight if there are one or more traits where our comp clearly does not match. i.e. better to be close-ish across the board than close in a bunch of stuff and really far off in others.
         -every player in the player array will then have some composite score value. the 10 lowest values are going to be your 10 closest comps. this is what we spit out in our results page
