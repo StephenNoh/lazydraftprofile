@@ -256,6 +256,38 @@
     "minutes": 1998
   },
   {
+    "Player": "Jonathan Isaac",
+    "three_Percentile": 0.429,
+    "points_Percentile": 0.643,
+    "rebounding_Percentile": 0.939,
+    "assist_Percentile": 0.214,
+    "turnover_Percentile": 0.561,
+    "defense_Percentile": 0.48,
+    "3_Percentage": 0.34,
+    "pts_Per36": 14.8,
+    "reb_Per36": 8.5,
+    "ast_Per36": 1.8,
+    "tov_Per36": 1.8,
+    "dbpm": 0,
+    "minutes": 953
+  },
+  {
+    "Player": "Dragan Bender",
+    "three_Percentile": 0.51,
+    "points_Percentile": 0.48,
+    "rebounding_Percentile": 1,
+    "assist_Percentile": 0.827,
+    "turnover_Percentile": 0.888,
+    "defense_Percentile": 0.541,
+    "3_Percentage": 0.349,
+    "pts_Per36": 13.5,
+    "reb_Per36": 9.2,
+    "ast_Per36": 3.5,
+    "tov_Per36": 2.6,
+    "dbpm": 0.1,
+    "minutes": 286
+  },
+  {
     "Player": "Jerami Grant",
     "three_Percentile": 0.842,
     "points_Percentile": 0.622,
