@@ -53,23 +53,25 @@ function comparePositions(playerPosition, positionList) {
 function fillProfile () {
   
 //hide the sliders, fill the strenghts and weaknesses divs with text
-  document.getElementById("start-form").classList.add("hide")
-  document.getElementById("profile").classList.remove("hide")
+  if (getPosition() == "") {
+    $('.alert-primary').removeClass("d-none");
+  } else {
+    $(".alert-primary").addClass("d-none");
+    document.getElementById("start-form").classList.add("hide")
+    document.getElementById("profile").classList.remove("hide")
 
-  document.getElementById("banner").innerText = "DRAFT COMPS: " + document.getElementById("name").value.toUpperCase()
-  setProfile()
-  if (getPositions() == "guard") {
-    document.getElementById("comps").innerText = (generatePercentileComps(guard_JSON))
+    document.getElementById("banner").innerText = "DRAFT COMPS: " + document.getElementById("name").value.toUpperCase()
+    setProfile()
+    if (getPosition() == "guard") {
+      document.getElementById("comps").innerText = (generatePercentileComps(guard_JSON))
+    } else if (getPosition() == "wing") {
+      document.getElementById("comps").innerText = (generatePercentileComps(wing_JSON))
+    } else if (getPosition() == "big") {
+      document.getElementById("comps").innerText = (generatePercentileComps(big_JSON))
+    }
+
+    document.getElementById("pick-range").innerText = pickRange()
   }
-  if (getPositions() == "wing") {
-    document.getElementById("comps").innerText = (generatePercentileComps(wing_JSON))
-  }
-  if (getPositions() == "big") {
-    document.getElementById("comps").innerText = (generatePercentileComps(big_JSON))
-  }
-  
-  document.getElementById("pick-range").innerText = pickRange()
-  
 }
 
 //comps
@@ -85,19 +87,18 @@ let percentileProfile = {
   percentileProfile.defense = (document.getElementById("defense-slider").value)
   percentileProfile.rebounding = (document.getElementById("rebounding-slider").value)
   percentileProfile.scoring = (document.getElementById("scoring-slider").value)
-  percentileProfile.positions = getPositions()
+  percentileProfile.positions = getPosition()
 }
 
 
 
-function getPositions() {
-  $selectedPositions = $("#position-select").find("input:checked");
-  if ($selectedPositions.length > 0) {
-    return $selectedPositions.map(function(idx, element) {
-      return $(element).val();
-    }).get();
+function getPosition() {
+  $selectedPosition = $("#position-select input[type='radio'][name='position-select']:checked");
+
+  if ($selectedPosition.length > 0) {
+    return $selectedPosition.val();
   } else {
-    return [];
+    return "";
   }
 }
 

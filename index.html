@@ -9,6 +9,9 @@
 </head>
 <body>
     <div class="container">
+        <div class="alert alert-primary d-none" role="alert">
+            Please select a position to continue.
+        </div>
         <h1 id="banner">Find NBA Comps</h1>
         <div id="start-form">
             <hr>
@@ -19,17 +22,17 @@
             
             <form>
                 <div class="form-group" id="position-select">
-                    <label>Positions: (Only check one box. You MUST check a box to proceed)</label><br>
+                    <label>Positions:</label><br>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="position-select-guard" value="guard">
+                        <input class="form-check-input" type="radio" id="position-select-guard" name="position-select" value="guard">
                         <label class="form-check-label" for="position-select-guard">Guard</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="position-select-wing" value="wing">
+                        <input class="form-check-input" type="radio" id="position-select-wing" name="position-select" value="wing">
                         <label class="form-check-label" for="position-select-wing">Wing</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="position-select-big" value="big">
+                        <input class="form-check-input" type="radio" id="position-select-big" name="position-select" value="big">
                         <label class="form-check-label" for="position-select-big">Big</label>
                     </div>
                 </div>
