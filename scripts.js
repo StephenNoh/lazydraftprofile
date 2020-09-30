@@ -52,10 +52,11 @@ function comparePositions(playerPosition, positionList) {
 //hide the slider bars and bring up the scouting report page
 function fillProfile () {
   
-//hide the sliders, fill the strenghts and weaknesses divs with text
+//hide the sliders, generate comps 
   if (getPosition() == "") {
     $('.alert-primary').removeClass("d-none");
-  } else {
+  } 
+  else {
     $(".alert-primary").addClass("d-none");
     document.getElementById("start-form").classList.add("hide")
     document.getElementById("profile").classList.remove("hide")
@@ -63,11 +64,14 @@ function fillProfile () {
     document.getElementById("banner").innerText = "DRAFT COMPS: " + document.getElementById("name").value.toUpperCase()
     setProfile()
     if (getPosition() == "guard") {
-      document.getElementById("comps").innerText = (generatePercentileComps(guard_JSON))
+      generatePercentileComps(guard_JSON)
+      
     } else if (getPosition() == "wing") {
-      document.getElementById("comps").innerText = (generatePercentileComps(wing_JSON))
+      generatePercentileComps(wing_JSON)
+    
     } else if (getPosition() == "big") {
-      document.getElementById("comps").innerText = (generatePercentileComps(big_JSON))
+      generatePercentileComps(big_JSON)
+     
     }
 
     document.getElementById("pick-range").innerText = pickRange()
@@ -116,16 +120,16 @@ function pickRange () {
       range += values[i]
     }
   }
-  if (range > 430) {
+  if (range > 450) {
     return "Top five."
   }
-  if (range > 360 && range < 431) {
+  if (range > 400 && range < 451) {
     return "Lottery pick."
   }
-  if (range > 280 && range < 361) {
+  if (range > 330 && range < 401) {
     return "Late first round."
   }
-  if (range > 200 && range < 281) {
+  if (range > 200 && range < 331) {
     return "Second round."
   }
   if (range > 150 && range < 201) {
@@ -172,7 +176,42 @@ function addCompositeScoreProperty (player) {
 //now let's apply the functions to the jsons (either guard_JSON, wing_JSON, or big_JSON, depending on what our user selects), sort the jsons (ascending) by composite score value, and return the top 10 closest comps
 function generatePercentileComps (positional_JSON) {
   positional_JSON.forEach(player => addCompositeScoreProperty(player))
+  //sort by composite score
   positional_JSON.sort((a, b) => parseFloat(a.compositeScore) - parseFloat(b.compositeScore));
-  //we can change slice here to return as many results as we want
-  return positional_JSON.slice(0,10).map(a =>a.Player).join(", ")
+  fillTable(positional_JSON)
+}
+
+//fills the results table 
+function fillTable(positional_JSON) {
+  //fill first row of table (info inputted on sliders)
+  if (document.getElementById("name").value == "") {
+    document.getElementById("name0").innerText = "no name entered"
+  }
+  else {
+  document.getElementById("name0").innerText = document.getElementById("name").value
+  }
+  document.getElementById("defense0").innerText = percentileProfile.defense
+  document.getElementById("shooting0").innerText = percentileProfile.shooting
+  document.getElementById("passing0").innerText = percentileProfile.passing
+  document.getElementById("rebounding0").innerText = percentileProfile.rebounding
+  document.getElementById("scoring0").innerText = percentileProfile.scoring
+  //fill the comp rows for the table
+  for (let i = 0; i < 5; i++) {
+    //if we want to display percentiles
+    // document.getElementById(`name${[i+1]}`).innerText = positional_JSON[i].Player
+    // document.getElementById(`defense${[i+1]}`).innerText = Math.round(positional_JSON[i].defense_Percentile*100)
+    // document.getElementById(`shooting${[i+1]}`).innerText = Math.round(positional_JSON[i].three_Percentile*100)
+    // document.getElementById(`passing${[i+1]}`).innerText = Math.round(positional_JSON[i].assist_Percentile*100)
+    // document.getElementById(`rebounding${[i+1]}`).innerText = Math.round(positional_JSON[i].rebounding_Percentile*100)
+    // document.getElementById(`scoring${[i+1]}`).innerText = Math.round(positional_JSON[i].points_Percentile*100)
+    
+    //if we want to display per 36 stats
+    document.getElementById(`name${[i+1]}`).innerText = positional_JSON[i].Player
+    document.getElementById(`defense${[i+1]}`).innerText = positional_JSON[i].dbpm
+    document.getElementById(`shooting${[i+1]}`).innerText = Math.round(positional_JSON[i].three_Percentage*100) + "%"
+    document.getElementById(`passing${[i+1]}`).innerText = positional_JSON[i].ast_Per36
+    document.getElementById(`rebounding${[i+1]}`).innerText = positional_JSON[i].reb_Per36
+    document.getElementById(`scoring${[i+1]}`).innerText = positional_JSON[i].pts_Per36
+    document.getElementById(`similarity${[i+1]}`).innerText = Math.round(positional_JSON[i].compositeScore)
+  }
 }
