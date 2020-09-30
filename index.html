@@ -67,10 +67,7 @@
         </div>
         <div class="hide" id="profile">
             <div id="profile-text">
-                <!-- <div class ="heading">Comps:</div>
-                <hr>
-                <div>Top 10 Comps: <span id="comps"></span> -->
-                <div class="heading">Your Inputs (out of 100):</div>
+                <!-- <div class="heading">Your Inputs (out of 100):</div>
                     <table class="table">
                         <thead>
                           <tr>
@@ -94,76 +91,127 @@
                             <td id="scoring0">Scoring</td>
                           </tr>
                         </tbody>
-                    </table>
-                <div class="heading">Your Top Five Comps:</div>
-                    <table class="table">
-                        <thead>
-                          <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Name</th>
-                            <th scope="col">Defensive Box Plus-Minus</th>
-                            <th scope="col">3-point %</th>
-                            <th scope="col">Assists per 36</th>
-                            <th scope="col">Rebounds per 36</th>
-                            <th scope="col">Points per 36</th>
-                            <th scope="col">Similarity Score</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <th scope="row">1</th>
-                            <td id="name1">Name</td>
-                            <td id="defense1">Defense</td>
-                            <td id="shooting1">Shooting</td>
-                            <td id="passing1">Passing</td>
-                            <td id="rebounding1">Rebounding</td>
-                            <td id="scoring1">Scoring</td>
-                            <td id="similarity1">Similarity</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">2</th>
-                            <td id="name2">Name</td>
-                            <td id="defense2">Defense</td>
-                            <td id="shooting2">Shooting</td>
-                            <td id="passing2">Passing</td>
-                            <td id="rebounding2">Rebounding</td>
-                            <td id="scoring2">Scoring</td>
-                            <td id="similarity2">Similarity</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">3</th>
-                            <td id="name3">Name</td>
-                            <td id="defense3">Defense</td>
-                            <td id="shooting3">Shooting</td>
-                            <td id="passing3">Passing</td>
-                            <td id="rebounding3">Rebounding</td>
-                            <td id="scoring3">Scoring</td>
-                            <td id="similarity3">Similarity</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">4</th>
-                            <td id="name4">Name</td>
-                            <td id="defense4">Defense</td>
-                            <td id="shooting4">Shooting</td>
-                            <td id="passing4">Passing</td>
-                            <td id="rebounding4">Rebounding</td>
-                            <td id="scoring4">Scoring</td>
-                            <td id="similarity4">Similarity</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">5</th>
-                            <td id="name5">Name</td>
-                            <td id="defense5">Defense</td>
-                            <td id="shooting5">Shooting</td>
-                            <td id="passing5">Passing</td>
-                            <td id="rebounding5">Rebounding</td>
-                            <td id="scoring5">Scoring</td>
-                            <td id="similarity5">Similarity</td>
-                          </tr>
-                        </tbody>
-                      </table>
+                    </table> -->
+                  <div class="table-responsive-sm">
+                      <table class="table">
+                          <thead>
+                            <tr>
+                              <th scope="col" class="num">#</th>
+                              <th scope="col">Name</th>
+                              <th scope="col">Defensive BPM</th>
+                              <th scope="col">3pt%</th>
+                              <th scope="col">AST/ 36</th>
+                              <th scope="col">REB/ 36</th>
+                              <th scope="col">PTS/ 36</th>
+                              <th scope="col">Comp Score</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <th scope="row" class="num">1</th>
+                              <td id="name1">Name</td>
+                              <td id="defense1">Defense</td>
+                              <td id="shooting1">Shooting</td>
+                              <td id="passing1">Passing</td>
+                              <td id="rebounding1">Rebounding</td>
+                              <td id="scoring1">Scoring</td>
+                              <td id="similarity1">Similarity</td>
+                            </tr>
+                            <tr>
+                              <th scope="row" class="num">2</th>
+                              <td id="name2">Name</td>
+                              <td id="defense2">Defense</td>
+                              <td id="shooting2">Shooting</td>
+                              <td id="passing2">Passing</td>
+                              <td id="rebounding2">Rebounding</td>
+                              <td id="scoring2">Scoring</td>
+                              <td id="similarity2">Similarity</td>
+                            </tr>
+                            <tr>
+                              <th scope="row" class="num">3</th>
+                              <td id="name3">Name</td>
+                              <td id="defense3">Defense</td>
+                              <td id="shooting3">Shooting</td>
+                              <td id="passing3">Passing</td>
+                              <td id="rebounding3">Rebounding</td>
+                              <td id="scoring3">Scoring</td>
+                              <td id="similarity3">Similarity</td>
+                            </tr>
+                            <tr>
+                              <th scope="row" class="num">4</th>
+                              <td id="name4">Name</td>
+                              <td id="defense4">Defense</td>
+                              <td id="shooting4">Shooting</td>
+                              <td id="passing4">Passing</td>
+                              <td id="rebounding4">Rebounding</td>
+                              <td id="scoring4">Scoring</td>
+                              <td id="similarity4">Similarity</td>
+                            </tr>
+                            <tr>
+                              <th scope="row" class="num">5</th>
+                              <td id="name5">Name</td>
+                              <td id="defense5">Defense</td>
+                              <td id="shooting5">Shooting</td>
+                              <td id="passing5">Passing</td>
+                              <td id="rebounding5">Rebounding</td>
+                              <td id="scoring5">Scoring</td>
+                              <td id="similarity5">Similarity</td>
+                            </tr>
+                            <tr>
+                              <th scope="row" class="num">6</th>
+                              <td id="name6">Name</td>
+                              <td id="defense6">Defense</td>
+                              <td id="shooting6">Shooting</td>
+                              <td id="passing6">Passing</td>
+                              <td id="rebounding6">Rebounding</td>
+                              <td id="scoring6">Scoring</td>
+                              <td id="similarity6">Similarity</td>
+                            </tr>
+                            <tr>
+                              <th scope="row" class="num">7</th>
+                              <td id="name7">Name</td>
+                              <td id="defense7">Defense</td>
+                              <td id="shooting7">Shooting</td>
+                              <td id="passing7">Passing</td>
+                              <td id="rebounding7">Rebounding</td>
+                              <td id="scoring7">Scoring</td>
+                              <td id="similarity7">Similarity</td>
+                            </tr>
+                            <tr>
+                              <th scope="row" class="num">8</th>
+                              <td id="name8">Name</td>
+                              <td id="defense8">Defense</td>
+                              <td id="shooting8">Shooting</td>
+                              <td id="passing8">Passing</td>
+                              <td id="rebounding8">Rebounding</td>
+                              <td id="scoring8">Scoring</td>
+                              <td id="similarity8">Similarity</td>
+                            </tr>
+                            <tr>
+                              <th scope="row" class="num">9</th>
+                              <td id="name9">Name</td>
+                              <td id="defense9">Defense</td>
+                              <td id="shooting9">Shooting</td>
+                              <td id="passing9">Passing</td>
+                              <td id="rebounding9">Rebounding</td>
+                              <td id="scoring9">Scoring</td>
+                              <td id="similarity9">Similarity</td>
+                            </tr>
+                            <tr>
+                              <th scope="row" class="num">10</th>
+                              <td id="name10">Name</td>
+                              <td id="defense10">Defense</td>
+                              <td id="shooting10">Shooting</td>
+                              <td id="passing10">Passing</td>
+                              <td id="rebounding10">Rebounding</td>
+                              <td id="scoring10">Scoring</td>
+                              <td id="similarity10">Similarity</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                 </div>
-                <p>Player stats are taken from the 2019-20 season only, scaled to per 36 minutes. Similairty score out of 100 <a href=#>See how it's calculated</a></p>
+                <p>Player stats are taken from the 2019-20 season and scaled to per 36 minutes. Comp score is out of 100. <a href=#>See how it's calculated</a></p>
                 <br>
                 <div class ="heading">Pick Range: <span id="pick-range" style="font-weight:normal"></span></div>
                 <br>

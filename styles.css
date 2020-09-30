@@ -42,3 +42,18 @@
   justify-content: center;
   margin-bottom: 20px;
 }
+
+.table td, th {
+  text-align: center;   
+}
+
+
+
+@media screen and (max-width: 600px) {
+  .table {
+    font-size: .7rem;
+  }
+  .num { 
+    display: none; 
+  } 
+}

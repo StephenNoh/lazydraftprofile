@@ -184,19 +184,19 @@ function generatePercentileComps (positional_JSON) {
 //fills the results table 
 function fillTable(positional_JSON) {
   //fill first row of table (info inputted on sliders)
-  if (document.getElementById("name").value == "") {
-    document.getElementById("name0").innerText = "no name entered"
-  }
-  else {
-  document.getElementById("name0").innerText = document.getElementById("name").value
-  }
-  document.getElementById("defense0").innerText = percentileProfile.defense
-  document.getElementById("shooting0").innerText = percentileProfile.shooting
-  document.getElementById("passing0").innerText = percentileProfile.passing
-  document.getElementById("rebounding0").innerText = percentileProfile.rebounding
-  document.getElementById("scoring0").innerText = percentileProfile.scoring
+  // if (document.getElementById("name").value == "") {
+  //   document.getElementById("name0").innerText = "none entered"
+  // }
+  // else {
+  // document.getElementById("name0").innerText = document.getElementById("name").value
+  // }
+  // document.getElementById("defense0").innerText = percentileProfile.defense
+  // document.getElementById("shooting0").innerText = percentileProfile.shooting
+  // document.getElementById("passing0").innerText = percentileProfile.passing
+  // document.getElementById("rebounding0").innerText = percentileProfile.rebounding
+  // document.getElementById("scoring0").innerText = percentileProfile.scoring
   //fill the comp rows for the table
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; i < 10; i++) {
     //if we want to display results as percentiles
     // document.getElementById(`name${[i+1]}`).innerText = positional_JSON[i].Player
     // document.getElementById(`defense${[i+1]}`).innerText = Math.round(positional_JSON[i].defense_Percentile*100)
