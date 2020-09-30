@@ -197,7 +197,7 @@ function fillTable(positional_JSON) {
   document.getElementById("scoring0").innerText = percentileProfile.scoring
   //fill the comp rows for the table
   for (let i = 0; i < 5; i++) {
-    //if we want to display percentiles
+    //if we want to display results as percentiles
     // document.getElementById(`name${[i+1]}`).innerText = positional_JSON[i].Player
     // document.getElementById(`defense${[i+1]}`).innerText = Math.round(positional_JSON[i].defense_Percentile*100)
     // document.getElementById(`shooting${[i+1]}`).innerText = Math.round(positional_JSON[i].three_Percentile*100)
@@ -205,13 +205,13 @@ function fillTable(positional_JSON) {
     // document.getElementById(`rebounding${[i+1]}`).innerText = Math.round(positional_JSON[i].rebounding_Percentile*100)
     // document.getElementById(`scoring${[i+1]}`).innerText = Math.round(positional_JSON[i].points_Percentile*100)
     
-    //if we want to display per 36 stats
+    //if we want to display results as per 36 stats
     document.getElementById(`name${[i+1]}`).innerText = positional_JSON[i].Player
     document.getElementById(`defense${[i+1]}`).innerText = positional_JSON[i].dbpm
     document.getElementById(`shooting${[i+1]}`).innerText = Math.round(positional_JSON[i].three_Percentage*100) + "%"
     document.getElementById(`passing${[i+1]}`).innerText = positional_JSON[i].ast_Per36
     document.getElementById(`rebounding${[i+1]}`).innerText = positional_JSON[i].reb_Per36
     document.getElementById(`scoring${[i+1]}`).innerText = positional_JSON[i].pts_Per36
-    document.getElementById(`similarity${[i+1]}`).innerText = Math.round(positional_JSON[i].compositeScore)
+    document.getElementById(`similarity${[i+1]}`).innerText = Math.round(((500-positional_JSON[i].compositeScore)/500)*100)
   }
 }
