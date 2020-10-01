@@ -47,10 +47,47 @@
   text-align: center;   
 }
 
+.tenth {
+  background-color:#FFFFFF;
+}
 
+.twentieth {
+  background-color: #ECF7F2;
+}
+
+.thirtieth {
+  background-color:#d9eFE5;
+}
+
+.fortieth {
+  background-color: #C7E8D8;
+}
+
+.fiftieth {
+  background-color: #B4E0CB
+}
+
+.sixtieth {
+  background-color:#a1d9be;
+}
+
+.seventieth {
+  background-color:#8FD1B1;
+}
+
+.eightieth {
+  background-color:#7CCAA4;
+}
+.ninetieth {
+  background-color:#69c297;
+}
+
+.hundredth {
+  background-color:#7CCAA4;
+}
 
 @media screen and (max-width: 600px) {
-  .table {
+  .table, .text-muted {
     font-size: .7rem;
   }
   .num { 

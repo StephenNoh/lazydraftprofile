@@ -183,19 +183,13 @@ function generatePercentileComps (positional_JSON) {
 
 //fills the results table 
 function fillTable(positional_JSON) {
-  //fill first row of table (info inputted on sliders)
-  // if (document.getElementById("name").value == "") {
-  //   document.getElementById("name0").innerText = "none entered"
-  // }
-  // else {
-  // document.getElementById("name0").innerText = document.getElementById("name").value
-  // }
-  // document.getElementById("defense0").innerText = percentileProfile.defense
-  // document.getElementById("shooting0").innerText = percentileProfile.shooting
-  // document.getElementById("passing0").innerText = percentileProfile.passing
-  // document.getElementById("rebounding0").innerText = percentileProfile.rebounding
-  // document.getElementById("scoring0").innerText = percentileProfile.scoring
-  //fill the comp rows for the table
+  // fill first row of table (info inputted on sliders)
+  document.getElementById("defense0").innerText = percentileProfile.defense
+  document.getElementById("shooting0").innerText = percentileProfile.shooting
+  document.getElementById("passing0").innerText = percentileProfile.passing
+  document.getElementById("rebounding0").innerText = percentileProfile.rebounding
+  document.getElementById("scoring0").innerText = percentileProfile.scoring
+  // fill the comp rows for the table
   for (let i = 0; i < 10; i++) {
     //if we want to display results as percentiles
     // document.getElementById(`name${[i+1]}`).innerText = positional_JSON[i].Player
@@ -208,10 +202,56 @@ function fillTable(positional_JSON) {
     //if we want to display results as per 36 stats
     document.getElementById(`name${[i+1]}`).innerText = positional_JSON[i].Player
     document.getElementById(`defense${[i+1]}`).innerText = positional_JSON[i].dbpm
+    background(positional_JSON[i].defense_Percentile*100, document.getElementById(`defense${[i+1]}`))
+    
     document.getElementById(`shooting${[i+1]}`).innerText = Math.round(positional_JSON[i].three_Percentage*100) + "%"
+    background(positional_JSON[i].three_Percentile*100, document.getElementById(`shooting${[i+1]}`))
+    
     document.getElementById(`passing${[i+1]}`).innerText = positional_JSON[i].ast_Per36
+    background(positional_JSON[i].assist_Percentile*100, document.getElementById(`passing${[i+1]}`))
+    
     document.getElementById(`rebounding${[i+1]}`).innerText = positional_JSON[i].reb_Per36
+    background(positional_JSON[i].rebounding_Percentile*100, document.getElementById(`rebounding${[i+1]}`))
+    
     document.getElementById(`scoring${[i+1]}`).innerText = positional_JSON[i].pts_Per36
+    background(positional_JSON[i].points_Percentile*100, document.getElementById(`scoring${[i+1]}`))
+
     document.getElementById(`similarity${[i+1]}`).innerText = Math.round(((500-positional_JSON[i].compositeScore)/500)*100)
+    background(((500-positional_JSON[i].compositeScore)/500)*100, document.getElementById(`similarity${[i+1]}`))
+  }
+}
+
+
+//add background color to show percentile
+function background(value, css) {
+  if (value < 10) {
+    $(css).addClass("tenth");
+  }
+  if (value > 9 && value <20) {
+    $(css).addClass("twentieth");
+  }
+  if (value > 19 && value <30) {
+    $(css).addClass("thirtieth");
+  }
+  if (value > 29 && value <40) {
+    $(css).addClass("fortieth");
+  }
+  if (value > 39 && value <50) {
+    $(css).addClass("fiftieth");
+  }
+  if (value > 49 && value <60) {
+    $(css).addClass("sixtieth");
+  }
+  if (value > 59 && value <70) {
+    $(css).addClass("seventieth");
+  }
+  if (value > 69 && value <80) {
+    $(css).addClass("eightieth");
+  }
+  if (value > 79 && value <90) {
+    $(css).addClass("ninetieth");
+  }
+  if (value > 89 && value <101) {
+    $(css).addClass("hundredth");
   }
 }
