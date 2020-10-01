@@ -21,6 +21,7 @@ function goBack () {
   document.getElementById("start-form").classList.remove("hide")
   document.getElementById("profile").classList.add("hide")
   document.getElementById("banner").innerText = "Find NBA Comps"
+  removeBackground()
 }
 
 //new jsons. declare guard, wing, big jsons
@@ -254,4 +255,17 @@ function background(value, css) {
   if (value > 89 && value <101) {
     $(css).addClass("hundredth");
   }
+}
+
+function removeBackground () {
+  $('.tenth').removeClass('tenth');
+  $('.twentieth').removeClass('twentieth');
+  $('.thirtieth').removeClass('thirtieth');
+  $('.fortieth').removeClass('fortieth');
+  $('.fiftieth').removeClass('fiftieth');
+  $('.sixtieth').removeClass('sixtieth');
+  $('.seventieth').removeClass('seventieth');
+  $('.eightieth').removeClass('eightieth');
+  $('.ninetieth').removeClass('ninetieth');
+  $('.hundredth').removeClass('hundredth');
 }

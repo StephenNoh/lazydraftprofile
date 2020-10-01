@@ -48,42 +48,42 @@
 }
 
 .tenth {
-  background-color:#FFFFFF;
+  background-color:#EFF9F4;
 }
 
 .twentieth {
-  background-color: #ECF7F2;
+  background-color: #DEF2E8;
 }
 
 .thirtieth {
-  background-color:#d9eFE5;
+  background-color:#CDEBDC;
 }
 
 .fortieth {
-  background-color: #C7E8D8;
+  background-color: #BCE4D1;
 }
 
 .fiftieth {
-  background-color: #B4E0CB
+  background-color: #ABDDC5;
 }
 
 .sixtieth {
-  background-color:#a1d9be;
+  background-color:#9BD7B9;
 }
 
 .seventieth {
-  background-color:#8FD1B1;
+  background-color:#8AD0AE;
 }
 
 .eightieth {
-  background-color:#7CCAA4;
+  background-color:#79C9A2;
 }
 .ninetieth {
-  background-color:#69c297;
+  background-color:#68C296;
 }
 
 .hundredth {
-  background-color:#7CCAA4;
+  background-color:#57BB8A;
 }
 
 @media screen and (max-width: 600px) {
