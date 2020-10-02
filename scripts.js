@@ -62,7 +62,7 @@ function fillProfile () {
     document.getElementById("start-form").classList.add("hide")
     document.getElementById("profile").classList.remove("hide")
 
-    document.getElementById("banner").innerText = "DRAFT COMPS: " + document.getElementById("name").value.toUpperCase()
+    document.getElementById("banner").innerText = "TOP 10 NBA COMPS: " + document.getElementById("name").value.toUpperCase()
     setProfile()
     if (getPosition() == "guard") {
       generatePercentileComps(guard_JSON)
@@ -192,15 +192,6 @@ function fillTable(positional_JSON) {
   document.getElementById("scoring0").innerText = percentileProfile.scoring
   // fill the comp rows for the table
   for (let i = 0; i < 10; i++) {
-    //if we want to display results as percentiles
-    // document.getElementById(`name${[i+1]}`).innerText = positional_JSON[i].Player
-    // document.getElementById(`defense${[i+1]}`).innerText = Math.round(positional_JSON[i].defense_Percentile*100)
-    // document.getElementById(`shooting${[i+1]}`).innerText = Math.round(positional_JSON[i].three_Percentile*100)
-    // document.getElementById(`passing${[i+1]}`).innerText = Math.round(positional_JSON[i].assist_Percentile*100)
-    // document.getElementById(`rebounding${[i+1]}`).innerText = Math.round(positional_JSON[i].rebounding_Percentile*100)
-    // document.getElementById(`scoring${[i+1]}`).innerText = Math.round(positional_JSON[i].points_Percentile*100)
-    
-    //if we want to display results as per 36 stats
     document.getElementById(`name${[i+1]}`).innerText = positional_JSON[i].Player
     document.getElementById(`defense${[i+1]}`).innerText = positional_JSON[i].dbpm
     background(positional_JSON[i].defense_Percentile*100, document.getElementById(`defense${[i+1]}`))
@@ -220,6 +211,7 @@ function fillTable(positional_JSON) {
     document.getElementById(`similarity${[i+1]}`).innerText = Math.round(((500-positional_JSON[i].compositeScore)/500)*100)
     background(((500-positional_JSON[i].compositeScore)/500)*100, document.getElementById(`similarity${[i+1]}`))
   }
+  projectStats()
 }
 
 
@@ -257,6 +249,8 @@ function background(value, css) {
   }
 }
 
+
+//reset classes in table when the back button is hit
 function removeBackground () {
   $('.tenth').removeClass('tenth');
   $('.twentieth').removeClass('twentieth');
@@ -268,4 +262,38 @@ function removeBackground () {
   $('.eightieth').removeClass('eightieth');
   $('.ninetieth').removeClass('ninetieth');
   $('.hundredth').removeClass('hundredth');
+}
+
+// project stats for user TODO
+function projectStats () {
+  document.getElementById("defense11").innerText = suffix(document.getElementById("defense-slider").value) + " percentile"
+  background(parseInt(document.getElementById("defense-slider").value), document.getElementById("defense11"))
+  document.getElementById("passing11").innerText = suffix(document.getElementById("passing-slider").value) + " percentile"
+  background(document.getElementById("passing-slider").value, document.getElementById("passing11"))
+  document.getElementById("shooting11").innerText = suffix(document.getElementById("shooting-slider").value) + " percentile"
+  background(document.getElementById("shooting-slider").value, document.getElementById("shooting11"))
+  document.getElementById("rebounding11").innerText = suffix(document.getElementById("rebounding-slider").value) + " percentile"
+  background(document.getElementById("rebounding-slider").value, document.getElementById("rebounding11"))
+  document.getElementById("scoring11").innerText = suffix(document.getElementById("scoring-slider").value) + " percentile"
+  background(document.getElementById("scoring-slider").value, document.getElementById("scoring11"))
+  background(100, document.getElementById("similarity11"))
+}
+
+function projection (number) {
+  return guard_JSON.find(element => Math.abs(guard_JSON.defense_Percentile*100 - number) < 3);
+}
+
+function suffix(i) {
+  let j = i % 10,
+      k = i % 100;
+  if (j == 1 && k != 11) {
+      return i + "st";
+  }
+  if (j == 2 && k != 12) {
+      return i + "nd";
+  }
+  if (j == 3 && k != 13) {
+      return i + "rd";
+  }
+  return i + "th";
 }
