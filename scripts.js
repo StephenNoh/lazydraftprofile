@@ -211,7 +211,7 @@ function fillTable(positional_JSON) {
     document.getElementById(`similarity${[i+1]}`).innerText = Math.round(((500-positional_JSON[i].compositeScore)/500)*100)
     background(((500-positional_JSON[i].compositeScore)/500)*100, document.getElementById(`similarity${[i+1]}`))
   }
-  projectStats()
+  projectStats(positional_JSON)
 }
 
 
@@ -264,36 +264,27 @@ function removeBackground () {
   $('.hundredth').removeClass('hundredth');
 }
 
-// project stats for user TODO
-function projectStats () {
-  document.getElementById("defense11").innerText = suffix(document.getElementById("defense-slider").value) + " percentile"
+// project stats for user 
+function projectStats (positional_JSON) {
+  //find a player in our JSON that is within 3% of the value that our user submitted, then convert that percentage into dbpm/assist per 36/rebounds per 36, etc.
+  document.getElementById("defense11").innerText = positional_JSON.find(player => Math.abs(player.defense_Percentile*100 - document.getElementById("defense-slider").value) < 3).dbpm
+  document.getElementById("passing11").innerText = positional_JSON.find(player => Math.abs(player.assist_Percentile*100 - document.getElementById("passing-slider").value) < 3).ast_Per36
+  
+  //for edge case where defensive bigs shooting is set to below 19, because there are no bigs in our database with percentile shooting 1-18% due to weird data distribution
+  if (positional_JSON == big_JSON && document.getElementById("shooting-slider").value < 19) {
+    document.getElementById("shooting11").innerText = "0%"
+  }
+  else {
+  document.getElementById("shooting11").innerText = Math.round(positional_JSON.find(player => Math.abs(player.three_Percentile*100 - document.getElementById("shooting-slider").value) < 3).three_Percentage*100) + "%"
+  }
+  
+  document.getElementById("rebounding11").innerText = positional_JSON.find(player => Math.abs(player.rebounding_Percentile*100 - document.getElementById("rebounding-slider").value) < 3).reb_Per36
+  document.getElementById("scoring11").innerText = positional_JSON.find(player => Math.abs(player.points_Percentile*100 - document.getElementById("scoring-slider").value) < 3).pts_Per36
+  //set background color of our user
   background(parseInt(document.getElementById("defense-slider").value), document.getElementById("defense11"))
-  document.getElementById("passing11").innerText = suffix(document.getElementById("passing-slider").value) + " percentile"
   background(document.getElementById("passing-slider").value, document.getElementById("passing11"))
-  document.getElementById("shooting11").innerText = suffix(document.getElementById("shooting-slider").value) + " percentile"
   background(document.getElementById("shooting-slider").value, document.getElementById("shooting11"))
-  document.getElementById("rebounding11").innerText = suffix(document.getElementById("rebounding-slider").value) + " percentile"
   background(document.getElementById("rebounding-slider").value, document.getElementById("rebounding11"))
-  document.getElementById("scoring11").innerText = suffix(document.getElementById("scoring-slider").value) + " percentile"
   background(document.getElementById("scoring-slider").value, document.getElementById("scoring11"))
   background(100, document.getElementById("similarity11"))
-}
-
-function projection (number) {
-  return guard_JSON.find(element => Math.abs(guard_JSON.defense_Percentile*100 - number) < 3);
-}
-
-function suffix(i) {
-  let j = i % 10,
-      k = i % 100;
-  if (j == 1 && k != 11) {
-      return i + "st";
-  }
-  if (j == 2 && k != 12) {
-      return i + "nd";
-  }
-  if (j == 3 && k != 13) {
-      return i + "rd";
-  }
-  return i + "th";
 }
