@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NBA Comps</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="banner">Find NBA Comps</h1>
+        <div id="description">
+        <div class="heading">How comp score is calculated:</div>
+        <hr>
+        <p>Users evaluate a player on a scale of 1-100 across five different categories (defense, passing, shooting, scoring, rebounding). Those values are then compared to percentile 
+            ranks of every NBA player by position that played over 250 minutes in the 2019-20 season (405 total players).</p> 
+        <p>For example, if a user inputted the following: Defense: 10, Passing: 20, Shooting: 30, Scoring: 40, Rebounding: 50</p>
+        <br>
+        <p>The comparison algorithm would then go through all players by position selected (guard, wing big) and compare each NBA player’s percentile rank to the values that the user inputted. </p>
+        <hr>
+        <p>Ex. Steven Adams comp score calculation for our given inputs: </p>
+        <ul>
+            <li>76th percentile in defensive box plus-minus  - 10 (our defense input) = 66</li>
+            <li>79th percentile in assists for big men- 20 (our passing input) = 59</li>
+            <li>33rd percentile in 3-point percentage for big men - 30 (our shooting input) = 3</li>
+            <li>48th percentile in points for big men - 40 (our scoring input) = 8</li>
+            <li>85th percentile in rebounding for big men - 50 (our rebounding input) = 35</li>
+        </ul>
+        <p>-------------------------</p>
+        <ul>
+            <li>66 + 59 + 3 + 8 + 35 = raw comp score of 171</li>
+        </ul>
+        <p>We take this number (171) and subtract it from 500, then divide by 500 to get final comp score</p>
+        <ul>
+            <li>(500 - 171)/500 = .658 = 66 final comp score (out of 100)</li>
+        </ul>
+<p>We calculate this score for every player in the league and return the top ten scores.
+    There is also an added coefficient (3) if there is a huge gap in any particular characteristic, to penalize players who are way off in one attribute. 
+    This creates a system where it is better to be close-ish across the board in all characteristics rather than close in many categories and really far off in others.</p>
+
+        </div>
+        <div class="buttons">
+            <button type="button" class="btn btn-primary" onclick="window.location.href='./index.html';">Go back</button>
+        </div>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
