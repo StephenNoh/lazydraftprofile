@@ -75,7 +75,7 @@ function fillProfile () {
      
     }
 
-    document.getElementById("pick-range").innerText = pickRange()
+    // document.getElementById("pick-range").innerText = pickRange()
   }
 }
 
@@ -108,39 +108,39 @@ function getPosition() {
 }
 
 
-//pick range
+//pick range (taking out for now, too buggy)
 
-function pickRange () {
-  let range = 0;
-  let values = [parseInt(document.getElementById("passing-slider").value), parseInt(document.getElementById("shooting-slider").value), parseInt(document.getElementById("defense-slider").value), parseInt(document.getElementById("rebounding-slider").value), parseInt(document.getElementById("scoring-slider").value)]
-  for (let i = 0; i < values.length; i++) {
-    if (values[i] > 85) {
-      range += values[i]*1.75
-    }
-    else {
-      range += values[i]
-    }
-  }
-  if (range > 450) {
-    return "Top five."
-  }
-  if (range > 400 && range < 451) {
-    return "Lottery pick."
-  }
-  if (range > 330 && range < 401) {
-    return "Late first round."
-  }
-  if (range > 200 && range < 331) {
-    return "Second round."
-  }
-  if (range > 150 && range < 201) {
-    return "Overseas."
-  }
-  if (range >= 0 && range < 151) {
-    return "Undrafted."
-  }
+// function pickRange () {
+//   let range = 0;
+//   let values = [parseInt(document.getElementById("passing-slider").value), parseInt(document.getElementById("shooting-slider").value), parseInt(document.getElementById("defense-slider").value), parseInt(document.getElementById("rebounding-slider").value), parseInt(document.getElementById("scoring-slider").value)]
+//   for (let i = 0; i < values.length; i++) {
+//     if (values[i] > 85) {
+//       range += values[i]*1.75
+//     }
+//     else {
+//       range += values[i]
+//     }
+//   }
+//   if (range > 450) {
+//     return "Top five."
+//   }
+//   if (range > 400 && range < 451) {
+//     return "Lottery pick."
+//   }
+//   if (range > 330 && range < 401) {
+//     return "Late first round."
+//   }
+//   if (range > 200 && range < 331) {
+//     return "Second round."
+//   }
+//   if (range > 150 && range < 201) {
+//     return "Overseas."
+//   }
+//   if (range >= 0 && range < 151) {
+//     return "Undrafted."
+//   }
 
-}
+// }
 
 //function to generate a composite score between user (userObject) and any player (playerObject) in the json array
 
@@ -269,7 +269,7 @@ function projectStats (positional_JSON) {
   //find a player in our JSON that is within 3% of the value that our user submitted, then convert that percentage into dbpm/assist per 36/rebounds per 36, etc.
   document.getElementById("defense11").innerText = positional_JSON.find(player => Math.abs(player.defense_Percentile*100 - document.getElementById("defense-slider").value) < 3).dbpm
   document.getElementById("passing11").innerText = positional_JSON.find(player => Math.abs(player.assist_Percentile*100 - document.getElementById("passing-slider").value) < 3).ast_Per36
-  
+  document.getElementById("name11").innerText = document.getElementById("name").value + " projections"
   //for edge case where defensive bigs shooting is set to below 19, because there are no bigs in our database with percentile shooting 1-18% due to weird data distribution
   if (positional_JSON == big_JSON && document.getElementById("shooting-slider").value < 19) {
     document.getElementById("shooting11").innerText = "0%"
@@ -287,4 +287,27 @@ function projectStats (positional_JSON) {
   background(document.getElementById("rebounding-slider").value, document.getElementById("rebounding11"))
   background(document.getElementById("scoring-slider").value, document.getElementById("scoring11"))
   background(100, document.getElementById("similarity11"))
+}
+
+function presets(num) {
+  const presetValues = [
+    [20, 50, 95, 75, 90, "LaMelo Ball", "guard"],
+    [30, 45, 40, 55, 90, "Anthony Edwards", "guard"],
+    [80, 45, 85, 50, 85, "Killian Hayes", "guard"],
+    [70, 45, 80, 80, 85, "Deni Avdija", "wing"], 
+    [50, 35, 20, 85, 95, "James Wiseman", "big"], 
+    [90, 30, 70, 80, 60, "Onyeka Okongwu", "big"], 
+    [20, 90, 30, 80, 90, "Obi Toppin", "big"], 
+    [55, 90, 90, 75, 35, "Tyrese Haliburton", "guard"], 
+    [90, 20, 75, 90, 50, "Isaac Okoro", "guard"], 
+    [90, 80, 30, 60, 40, "Devin Vassell", "wing"]
+  ]
+  document.getElementById("defense-slider").value = presetValues[num][0]
+  document.getElementById("shooting-slider").value = presetValues[num][1]
+  document.getElementById("passing-slider").value = presetValues[num][2]
+  document.getElementById("rebounding-slider").value = presetValues[num][3]
+  document.getElementById("scoring-slider").value = presetValues[num][4]
+  document.getElementById("name").value = presetValues[num][5]
+  document.getElementById(`position-select-${presetValues[num][6]}`).checked = true
+
 }

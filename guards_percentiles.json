@@ -2384,22 +2384,6 @@
     "minutes": 412
   },
   {
-    "Player": "Chris Chiozza",
-    "three_Percentile": 0.688,
-    "points_Percentile": 0.256,
-    "rebounding_Percentile": 0.6,
-    "assist_Percentile": 0.856,
-    "turnover_Percentile": 0.769,
-    "defense_Percentile": 0.775,
-    "three_Percentage": 0.375,
-    "pts_Per36": 12.7,
-    "reb_Per36": 4.8,
-    "ast_Per36": 7.5,
-    "tov_Per36": 2.9,
-    "dbpm": 0.5,
-    "minutes": 401
-  },
-  {
     "Player": "Josh Jackson",
     "three_Percentile": 0.231,
     "points_Percentile": 0.713,

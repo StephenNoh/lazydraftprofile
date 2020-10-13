@@ -16,11 +16,28 @@
         <div id="start-form">
             <hr>
             <div id="description">
-                <strong>Instructions:</strong> Move the sliders to correspond to skill level, then hit submit to find top 10 closest NBA player comparisons.
+                <p><strong>Instructions:</strong> This tool is designed to find NBA comps for either yourself or a draft prospect in the 2020 class. </p>
+                <p>Move the sliders to correspond to skill level, then hit submit to find top 10 closest NBA player comparisons. You can use preset values from the dropdown menu to find a comp for a 2020 draft prospect, or put in values that represent yourself to find your own NBA comps.</p>
             </div>
             <hr>
             
             <form>
+              <div class="dropdown">
+                <label for="presets">Select a preset:</label>
+                <select class="presets" onchange="presets(this.value)">
+                  <option value> -- use preset values -- </option>
+                  <option value="0">LaMelo Ball</option>
+                  <option value="1">Anthony Edwards</option>
+                  <option value="2">Killian Hayes</option>
+                  <option value="3">Deni Avdija</option>
+                  <option value="4">James Wiseman</option>
+                  <option value="5">Onyeka Okongwu</option>
+                  <option value="6">Obi Toppin</option>
+                  <option value="7">Tyrese Haliburton</option>
+                  <option value="8">Isaac Okoro</option>
+                  <option value="9">Devin Vassell</option>
+                </select>
+              </div>
                 <div class="form-group" id="position-select">
                     <label>Position:</label><br>
                     <div class="form-check form-check-inline">
@@ -208,7 +225,7 @@
                 <p class="text-muted text-right">*Background color = percentile rank based on position.</p>  
                 <p class="text-muted text-right">Player stats are taken from the 2019-20 season and scaled to per 36 minutes. Comp score is out of 100. <a href="./about.html">See how it's calculated</a></p>
                 <br>
-                <div class ="heading">Pick Range: <span id="pick-range" style="font-weight:normal"></span></div>
+                <!-- <div class ="heading">Pick Range: <span id="pick-range" style="font-weight:normal"></span></div> -->
                 <br>
                 <div class="buttons">
                 <button type="button" class="btn btn-primary" id="back-button">Go Back</button>
