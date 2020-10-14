@@ -299,7 +299,7 @@ function presets(num) {
     [90, 30, 70, 80, 60, "Onyeka Okongwu", "big"], 
     [20, 90, 30, 80, 90, "Obi Toppin", "big"], 
     [55, 90, 90, 75, 35, "Tyrese Haliburton", "guard"], 
-    [90, 20, 75, 90, 50, "Isaac Okoro", "guard"], 
+    [90, 25, 75, 60, 60, "Isaac Okoro", "wing"], 
     [90, 80, 30, 60, 40, "Devin Vassell", "wing"]
   ]
   document.getElementById("defense-slider").value = presetValues[num][0]

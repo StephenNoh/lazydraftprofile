@@ -26,6 +26,7 @@
 .btn {
   background-color: #434343;
   border: #434343;
+  margin: 10px;
 }
 
 .btn:hover {
@@ -86,6 +87,11 @@
   background-color:#57BB8A;
 }
 
+.footer {
+  margin-top: 25px;
+  font-size: 13px;
+  text-align: center;
+}
 @media screen and (max-width: 600px) {
   .table, .text-muted {
     font-size: .7rem;
